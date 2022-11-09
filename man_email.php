@@ -43,7 +43,7 @@
 
   //cd_pessoa
   $cd_pessoa = new JFormHidden("f_cd_pessoa");
-  $man->AddDBField("cd_pessoa", $cd_pessoa, false);
+  $man->AddDBField("cd_pessoa", $cd_pessoa);
   
   //ds_email
   $label = "E-mail";
@@ -68,6 +68,7 @@
   $sql = [];
   $sql["fields"] = "cd_pessoa, ds_email, id_principal, cd_email";
   $sql["from"]   = "email";
+  $sql["count"]  = "cd_email"; 
   $sql["order"]  = "id_principal DESC";
   $sql["where"]  = "cd_pessoa = '{$f_cd_pessoa}' ";
     

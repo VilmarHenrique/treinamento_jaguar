@@ -142,7 +142,7 @@ class JDBAuth
 
     $sql = "SELECT canmenu " .
              "FROM " . $this->mAuthTable . " "  .
-            "WHERE username = '" . $this->mUser  . "' " .
+            "WHERE TRUE " .
               "AND functionname = '" . $this->mScript  . "' ";
 
     if (!empty($this->mDepartment))
@@ -177,7 +177,7 @@ class JDBAuth
 
     $sql = "SELECT canupdate " .
              "FROM " . $this->mAuthTable . " "  .
-            "WHERE username = '" . $this->mUser  . "' " .
+            "WHERE TRUE " .
               "AND functionname = '" . $this->mScript  . "' ";
 
     if (!empty($this->mDepartment))
@@ -212,7 +212,7 @@ class JDBAuth
 
     $sql = "SELECT candelete " .
              "FROM " . $this->mAuthTable . " "  .
-            "WHERE username = '" . $this->mUser  . "' " .
+            "WHERE TRUE " .
               "AND functionname = '" . $this->mScript  . "' ";
 
     if (!empty($this->mDepartment))
@@ -247,7 +247,7 @@ class JDBAuth
 
     $sql = "SELECT caninsert " .
              "FROM " . $this->mAuthTable . " "  .
-            "WHERE username = '" . $this->mUser  . "' " .
+            "WHERE TRUE " .
               "AND functionname = '" . $this->mScript  . "' ";
 
     if (!empty($this->mDepartment))
@@ -318,7 +318,7 @@ class JDBAuth
 
     $sql = "SELECT canselect, filename " .
              "FROM " . $this->mAuthTable . " "  .
-            "WHERE username = '" . $this->mUser  . "' " .
+            "WHERE TRUE " .
               "AND functionname = '" . $this->mScript  . "' ";
 
     if (!empty($this->mDepartment))

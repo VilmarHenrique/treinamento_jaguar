@@ -1,5 +1,5 @@
 <?php
-  $master= new JMasterDetail();
+  $master = new JMasterDetail();
   $master->SetDefaultFile("man_pessoa.php");
   
   $key = array("f_cd_pessoa");

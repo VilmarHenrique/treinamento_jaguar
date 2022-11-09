@@ -574,7 +574,7 @@ Class JConsultation extends JBaseConsultation
       $sql = "SELECT functionname
                 FROM jaguar_auth
                WHERE functionname IN ('" . implode("', '", $arr_function) . "')
-                 AND username = '" . $_SESSION["s_cd_usuario"] . "'
+                 AND TRUE
                  AND canselect = '1' ";
 
       if (!$rs = $this->mConn->Select($sql))

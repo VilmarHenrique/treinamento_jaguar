@@ -11,11 +11,11 @@
   $man->AddMasterDetail($master);
   
   $conn->SetDebug(0);
-  
+
   //cd_pessoa
   $cd_pessoa = new JFormHidden("f_cd_pessoa");
   $man->AddDBField("cd_pessoa", $cd_pessoa, false, true);
-  
+
   //nm_pessoa
   $label = "Nome";
   $nm_pessoa = new JFormText("f_nm_pessoa");
@@ -23,7 +23,7 @@
   $man->AddDBField("nm_pessoa", $nm_pessoa, "<b>{$label}</b>");
 
   //dt_nascimento
-  $label = "Data de Nascimento";
+  $label = "Dt. Nascimento";
   $dt_nascimento = new JFormDate("f_dt_nascimento");
   $dt_nascimento->SetTestIfEmpty(true, "Preencha o campo {$label}!");
   $man->AddDBField("dt_nascimento", $dt_nascimento, "<b>{$label}</b>");

@@ -34,6 +34,7 @@
     
     $consulta->SetVisibleFields("pessoa", $visible_fields);
     
+    $consulta->SetNoBreakLine("pessoa", "nm_pessoa");
     //Callback
     $consulta->SetCallBack("pessoa", get_index_of($visible_fields, "dt_nascimento"), "Format_Date", array("sys", "pt_BR"));
 
@@ -48,11 +49,11 @@
         ORDER BY e.id_tipo"; 
         
       
-    $str = "<a href=\"man_endereco.php?f_cd_endereco=".$f_cd_endereco.
+    $str = "<a href=\"man_endereco.php?f_cd_pessoa=".$f_cd_pessoa.
            "&f_id_retorno=600\" class=\"consulta\"  name=\"endereco\">Dados do Endereço</a>";
       
-    $consulta->AddArea("endereco", $sql, $str);
-      
+    $consulta->AddArea("endereco", $sql, $str, true);
+          
     $visible_fields = array("ds_sigla"      => "UF",
                             "nm_cidade"     => "Cidade/UF",
                             "nm_bairro"     => "Bairro",
@@ -61,6 +62,9 @@
                             "id_tipo"       => "Tipo",);
       
     $consulta->SetVisibleFields("endereco", $visible_fields);
+
+    //Callback
+    $consulta->SetCallback("endereco", get_index_of($visible_fields, "id_tipo"), "formata_id_tipo_endereco");
 
     ######### TELEFONE ########
       
@@ -71,16 +75,21 @@
        ORDER BY id_principal"; 
        
        
-    $str = "<a href=\"man_telefone.php?f_cd_telefone=".$f_cd_telefone.
+    $str = "<a href=\"man_telefone.php?f_cd_pessoa=".$f_cd_pessoa.
             "&f_id_retorno=600\" class=\"consulta\"  name=\"telefone\">Dados do Telefone</a>";
        
-    $consulta->AddArea("telefone", $sql, $str);
+    $consulta->AddArea("telefone", $sql, $str, true);
        
     $visible_fields = array("nr_telefone"     => "Telefone",
                             "id_principal"    => "Principal",
                             "id_tipo"         => "Tipo",);
        
     $consulta->SetVisibleFields("telefone", $visible_fields);
+    
+    //Callback
+    $consulta->SetCallback("telefone", get_index_of($visible_fields, "nr_telefone"), "Format_Fone", ["sys", "pt_BR"]);
+    $consulta->SetCallback("telefone", get_index_of($visible_fields, "id_principal"), "formata_id_sim_nao");
+    $consulta->SetCallback("telefone", get_index_of($visible_fields, "id_tipo"), "formata_id_tipo_telefone");
 
     ######### E-MAIL ########
       
@@ -91,15 +100,20 @@
        ORDER BY id_principal"; 
          
          
-    $str = "<a href=\"man_email.php?f_cd_email=".$f_cd_email.
+    $str = "<a href=\"man_email.php?f_cd_pessoa=".$f_cd_pessoa.
               "&f_id_retorno=600\" class=\"consulta\"  name=\"email\">Dados de E-mail</a>";
          
-    $consulta->AddArea("email", $sql, $str);
+    $consulta->AddArea("email", $sql, $str, true);
          
     $visible_fields = array("ds_email"     => "E-mail",
                             "id_principal" => "Principal",);
          
     $consulta->SetVisibleFields("email", $visible_fields);
+
+    //Callback
+    $consulta->SetCallBack("email", get_index_of($visible_fields, "id_principal"), "formata_id_sim_nao");
+    
+       
  
   }
   else
