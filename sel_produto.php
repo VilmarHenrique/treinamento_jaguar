@@ -45,6 +45,9 @@
   $grid_produto->AddFilterField("cd_produto", "Código", "number", "=",  "cd_produto");
   $grid_produto->AddFilterField("nm_produto", "Nome",   "text",   "~*", "nm_produto", false, false);
   
+  //CallBack
+  $grid_produto->SetCallback(get_index_of($visible_fields, "id_ativo"), "formata_id_sim_nao");
+  
   //FilterProperties
   $grid_produto->SetFilterProperties("nm_produto", ["SetSize" => 30]);
 

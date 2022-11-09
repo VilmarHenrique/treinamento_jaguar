@@ -3,7 +3,7 @@
   require_once("lib/jaguar/jaguar.inc.php");
   require_once("include/funcoes.inc.php");
   $s_md_cd_pessoa = $f_cd_pessoa;
-  include("md_pessoa.php");
+  include("md_produto.php");
 
   //Html
   $man = new JMaintenance($conn, "Manutenção de Produto");
@@ -29,6 +29,8 @@
   $id_ativo->SetOptions($op_id_sim_nao);
   $id_ativo->SetFirstEmpty();
   $man->AddDBField("id_ativo", $id_ativo, "<b>{$label}</b>");
+
+
   
   //man End
   $man->BuildEndMaintenance();
