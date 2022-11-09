@@ -1,0 +1,17 @@
+Treinamento^2022-11-03 09:11:30^INSERT INTO pais (nm_pais, cd_pais) VALUES ('CHILE', '6') ^0^man_pais.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:11:38^INSERT INTO uf (nm_uf, cd_uf) VALUES ('SANTA CATARINA', '2') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:12:02^INSERT INTO uf (nm_uf, cd_uf) VALUES ('SANTA CATARINA', '3') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:12:04^INSERT INTO uf (nm_uf, cd_uf) VALUES ('SANTA CATARINA', '4') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:12:10^INSERT INTO uf (nm_uf, cd_uf) VALUES ('SANTA CATARINA', '5') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:15:31^INSERT INTO uf (nm_uf, cd_uf) VALUES ('SANTA CATARINA', '6') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:15:49^INSERT INTO uf (nm_uf, cd_uf) VALUES ('ACRE', '7') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:18:42^INSERT INTO uf (nm_uf, cd_uf) VALUES ('ACRE', '8') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:23:54^INSERT INTO u (nm_uf, cd_uf) VALUES ('ACRE', NULL) ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:24:37^INSERT INTO uf (nm_uf, cd_uf) VALUES ('ACRE', '9') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:26:38^INSERT INTO uf (nm_uf, cd_uf) VALUES ('ACRE', '10') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:40:13^INSERT INTO uf (nm_uf, cd_uf) VALUES ('ACRE', '11') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 13:41:25^INSERT INTO uf (nm_uf, cd_uf) VALUES ('ACRE', '12') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 14:06:51^INSERT INTO uf (nm_uf, ds_sigla, cd_pais, cd_uf) VALUES ('ACRE', 'AC', '2', '13') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 14:06:59^INSERT INTO uf (nm_uf, ds_sigla, cd_pais, cd_uf) VALUES ('ADFSADF', 'AS', '6', '14') ^0^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 14:07:20^DELETE FROM uf WHERE cd_uf = '14' ^2^man_uf.php^treinamento_jaguar 
+Treinamento^2022-11-03 14:09:47^INSERT INTO uf (nm_uf, ds_sigla, cd_pais, cd_uf) VALUES ('ACRE', 'AC', NULL, '15') ^0^man_uf.php^treinamento_jaguar 

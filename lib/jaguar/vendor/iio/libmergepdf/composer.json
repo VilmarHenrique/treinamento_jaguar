@@ -1,0 +1,29 @@
+{
+    "name": "iio/libmergepdf",
+    "description": "Library for merging multiple PDFs",
+    "keywords": ["pdf", "merge", "concatenate"],
+    "homepage": "https://github.com/iio/libmergepdf",
+    "type": "library",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "Hannes Forsgård",
+            "email": "hannes.forsgard@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "iio\\libmergepdf\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "itbz/fpdi": "~1.4"
+    },
+    "require-dev": {
+        "symfony/finder": "2.*"
+    },
+    "suggest": {
+        "symfony/finder": "Bulk add files using finder."
+    }
+}

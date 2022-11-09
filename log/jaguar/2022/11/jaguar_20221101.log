@@ -1,0 +1,3 @@
+Treinamento^2022-11-01 13:27:53^INSERT INTO regiao (nm_regiao, cd_regiao) VALUES ('SUL', '2') ^0^man_regiao.php^treinamento_jaguar 
+Treinamento^2022-11-01 13:36:23^INSERT INTO regiao (nm_regiao, cd_regiao) VALUES ('SUDESTE', '3') ^0^man_regiao.php^treinamento_jaguar 
+Treinamento^2022-11-01 13:41:51^UPDATE regiao SET nm_regiao = 'SUDESTE - ALTERADO' WHERE cd_regiao = '3' ^1^man_regiao.php^treinamento_jaguar 

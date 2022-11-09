@@ -1,0 +1,66 @@
+Treinamento^2022-11-07 08:57:54^INSERT INTO cidade (nm_cidade, cd_uf, cd_cidade) VALUES ('SAO JOSE DO OURO', '1', '15') ^0^man_cidade.php^treinamento_jaguar 
+Treinamento^2022-11-07 08:58:36^INSERT INTO cidade_regiao (cd_regiao, cd_cidade) VALUES (NULL, '15') ^0^man_regiao_cidade.php^treinamento_jaguar 
+Treinamento^2022-11-07 09:05:20^INSERT INTO cidade_regiao (cd_regiao, cd_cidade) VALUES ('1', '15') ^0^man_regiao_cidade.php^treinamento_jaguar 
+Treinamento^2022-11-07 10:38:32^INSERT INTO pessoa_email (cd_pessoa, ds_email, id_principal) VALUES (NULL, 'vilmar@gmail.com', NULL) ^0^man_pessoa_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 10:51:17^INSERT INTO pessoa_email (cd_pessoa, ds_email, id_principal) VALUES (NULL, 'vilmar@gmail.com', NULL) ^0^man_pessoa_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 10:52:45^INSERT INTO pessoa_email (cd_pessoa, ds_email, id_principal) VALUES (NULL, 'vilmar@gmail.com', NULL) ^0^man_pessoa_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:00:04^INSERT INTO email (ds_email, id_principal, cd_pessoa) VALUES ('vilmar@gmail.com', NULL, '2') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:01:01^INSERT INTO email (ds_email, id_principal, cd_pessoa) VALUES ('vilmar@gmail.com', '1', '2') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:09:00^UPDATE pessoa SET nm_pessoa = 'TEXUGO', dt_nascimento = '1965-08-01' WHERE cd_pessoa = '3' ^1^man_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:09:17^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('3', 'texugo@gmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:10:20^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('3', 'texugo@gmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:10:30^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('3', 'texugo@gmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:14:26^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('3', 'texugo@gmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:14:31^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('3', 'texugo@gmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:19:14^INSERT INTO pessoa (nm_pessoa, dt_nascimento, cd_pessoa) VALUES ('JUAREZ', '1956-01-01', '5') ^0^man_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:24:26^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:24:50^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:26:29^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:27:41^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:27:43^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:27:48^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:28:09^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:28:11^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:31:48^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:38:19^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:44:44^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:47:08^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:47:14^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:47:45^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '0', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:47:56^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:48:15^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:48:29^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:48:49^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:49:57^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:50:11^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:50:31^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:50:44^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:50:50^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:50:53^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:50:59^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:51:58^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:52:10^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:53:35^INSERT INTO email () VALUES (NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:53:43^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:54:20^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:54:26^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:54:31^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:54:38^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 11:57:39^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:08:45^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:19:05^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@gmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:19:29^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@gmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:19:46^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@gmail.com', '1', NULL) ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:23:10^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', '3') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:23:17^DELETE FROM email WHERE cd_email = '3' ^2^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:23:30^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'juarez@hotmail.com', '1', '4') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:32:53^INSERT INTO pessoa (nm_pessoa, dt_nascimento, cd_pessoa) VALUES ('PAULO RODRIGUEZ', '2002-07-14', '6') ^0^man_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:33:29^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('6', 'paulor@gmail.com', '0', '5') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:47:30^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('2', 'texugo@gmail.com', NULL, '6') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:48:31^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('2', 'texugo@gmail.com', '0', '7') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 13:51:07^UPDATE email SET cd_pessoa = '2', ds_email = 'gremiomelhor@gmail.com', id_principal = '1' WHERE cd_email = '2' ^1^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 15:05:53^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('3', 'juarez@hotmail.com', '0', '8') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 15:07:28^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('3', 'vilmar@gmail.com', '0', '9') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-07 15:28:59^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES (NULL, '54999883058', '0', '1') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-07 15:29:38^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES (NULL, '54999883058', '0', '2') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-07 15:29:42^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES (NULL, '54999883058', '0', '3') ^0^man_telefone.php^treinamento_jaguar 

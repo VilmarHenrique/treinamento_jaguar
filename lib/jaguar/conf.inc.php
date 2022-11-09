@@ -1,0 +1,117 @@
+<?php
+/*
+Jaguar - A PHP framework for IT systems development
+Copyright (C) 2003  Atua Sistemas de Informação Ltda.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+You can contact Atua Sistemas de Informação Ltda by the e-mail jaguar@atua.com.br, or
+885 XV de Novembro street, Passo Fundo, RS 99010-100 Brazil
+
+Atua Sistemas de Informação Ltda., hereby disclaims all copyright interest in
+the library 'Jaguar' (A PHP framework for IT systems development) written
+by it's development team.
+
+Décio Mazzutti, 22 October 2003
+*/
+
+/**
+* Configuration file
+*
+* @author  Atua Sistemas de Informação
+*
+* @since   2002-05-31
+* @package Jaguar
+*/
+
+error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
+
+$url = "/" . substr(dirname(__FILE__), (strlen($_SERVER["DOCUMENT_ROOT"]) + 1) ) . "/";
+for ($i = 0; $i < strlen($url); $i++)
+  if (ord($url[$i]) == 92)
+    $url[$i] = "/";
+    
+define ("URL", $url);
+define ("LIBS", $url . "lib/");
+define ("CLASSES", "");
+define ("JAGUAR_PATH", dirname(__FILE__) . "/" );
+define ("JAGUAR_URL", str_replace ($_SERVER["DOCUMENT_ROOT"], "", dirname(__FILE__)) . "/");
+define ("EFESUS", dirname(dirname(dirname(__FILE__))) . "/"); 
+define ("JAGUAR_VERSION", 2.1);
+define ("BASE_URL", str_replace($_SERVER["DOCUMENT_ROOT"], "", dirname(dirname(dirname(__FILE__))) . "/"));
+$path = (strpos($_SERVER["REQUEST_URI"], "especifico")) ? "../" : "";
+$path_include = (strpos($_SERVER["REQUEST_URI"], "include")) ? "../" : "";
+
+@header('Content-Type: text/html; charset=ISO-8859-1');
+
+
+/**
+	* Utilize as constantes abaixo, caso for utilizar o Errbit (https://github.com/errbit/errbit)
+  */
+//define("ERRBIT_HOST",   		        "http://errbit.atua.com.br:3001");
+//define("ERRBIT_HOST_HTTPS",         "https://errbit.atua.com.br");
+//define("ERRBIT_API_KEY_PHP", 				"9146249d4e2ed868d3f5949771c3e870");
+//define("ERRBIT_API_KEY_JAVASCRIPT", "50ab1cae235f98b6f12280c1128b8d25");
+
+/**
+* Stores the databases's type
+* @var string $banco_tipo
+*/	
+$banco_tipo    = "pgsql";
+
+/**
+* Stores the databases's user
+* @var string $banco_usuario
+*/	
+$banco_usuario = "postgres";
+
+/**
+* Stores the database's log user
+* @var string $banco_usuario
+*/	
+$banco_usuario_log = false;
+
+/**
+* Stores the databases's password
+* @var string $banco_senha
+*/	
+$banco_senha   = "postgres";
+
+/**
+* Stores the databases's type
+* @var string $banco_nome
+*/	
+$banco_nome    = "treinamento_jaguar";
+
+/**
+* Stores the databases's host
+* @var string $banco_host
+*/	
+$banco_host    = "192.168.10.39:5432";
+
+//keep the array of files already validated
+//
+$_SERVER["already_validated"] = array();
+
+//In these situations user will be never logged in, so jaguar is forced to let user see these pages "without permission".
+$_SERVER["script_name"] = basename($_SERVER["PHP_SELF"], ".php");
+$arr = array("topo", "login", "informa_dados");
+if (in_array($_SERVER["script_name"], $arr))
+  $_SERVER["already_validated"][$_SERVER["script_name"]] = true;
+
+#$rpc_log_server = "http://www2/projetos/cvs/al_nunes/efesus/testes/rpc/log.php";
+$banco_host_backup = "159.253.142.163";
+
+$banco_host_replica = "192.168.0.32:5432";

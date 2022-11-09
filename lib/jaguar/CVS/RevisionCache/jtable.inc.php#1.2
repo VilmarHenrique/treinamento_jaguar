@@ -1,0 +1,674 @@
+<?php
+/*
+Jaguar - A PHP framework for IT systems development
+Copyright (C) 2003  Atua Sistemas de Informação Ltda.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+You can contact Atua Sistemas de Informação Ltda by the e-mail jaguar@atua.com.br, or
+885 Quinze de Novembro street, Passo Fundo, RS 99010-100 Brazil
+
+Atua Sistemas de Informação Ltda., hereby disclaims all copyright interest in
+the library 'Jaguar' (A PHP framework for IT systems development) written
+by it's development team.
+
+Décio Mazzutti, 22 October 2003
+*/
+
+require_once(JAGUAR_PATH . "jobject.inc.php");
+/**
+* Table's generation class
+*
+* @author  Atua Sistemas de Informação
+* @since   2002-23-05
+* @package Jaguar
+*/
+Class JTable extends JObject
+{
+  /**
+  * Stores object's type
+  * @var string
+  */
+  var $mType = "Table";
+
+  /**
+  * Stores table's alignment
+  * @var string
+  */
+  var $mAlign = false;
+
+  /**
+  * Stores table's border
+  * @var integer
+  */
+  var $mBorder = false;
+
+  /**
+  * Stores table's width
+  * @var integer
+  */
+  var $mWidth = false;
+
+  /**
+  * Stores table's cell padding
+  * @var integer
+  */
+  var $mCellPadding = false;
+
+  /**
+  * Stores table's cell spacing
+  * @var integer
+  */
+  var $mCellSpacing = false;
+  
+  /**
+  * Controls if there is an open thead
+  * @var boolean
+  */
+  var $mTheadOpened = false;
+  
+  /**
+  * Controls if there is an open tbody
+  * @var boolean
+  */
+  var $mTbodyOpened = false;
+
+  /**
+  * Controls if there is an open row
+  * @var boolean
+  */
+  var $mRowOpened = false;
+
+  /**
+  * Controls if there is an open header
+  * @var boolean
+  */
+  var $mHeaderOpened = false;
+
+  /**
+  * Controls if there is an open cell
+  * @var boolean
+  */
+  var $mCellOpened = false;
+
+  /**
+  * Controls if there is an open table
+  * @var boolean
+  */
+  var $mTableOpened = false;
+
+  /**
+  * Controls whether the table will be stripped or not
+  * @var boolean
+  */
+  var $mStriped = true;
+
+  /**
+  * Stores the number of the actual row (used if stripped)
+  * @var integer
+  */
+  var $mRowNumber = 0;
+
+  /**
+  * Stores the number of chars the table must be indented
+  * @var integer
+  */
+  var $mIndentation = 0;
+
+  /**
+  * Stores the full identation
+  * @var string
+  */
+  var $mSpace = "";
+
+  /**
+  * Controls if there will be spaces beetwen cell tags
+  * @var boolean
+  */
+  var $mTightCell = false;
+
+  /**
+  * Stores the CSS class used when the table is stripped in odd rows
+  * @var string
+  */
+  var $mRowOdd = "rowodd";
+
+  /**
+  * Stores the CSS class used when the table is stripped in odd rows (highlight)
+  * @var string
+  */
+  var $mRowOddHi = "rowodd-hi";
+
+  /**
+  * Stores the CSS class used when the table is stripped in even rows
+  * @var string
+  */
+  var $mRowEven = "roweven";
+
+  /**
+  * Stores the CSS class used when the table is stripped in even rows (highlight)
+  * @var string
+  */
+  var $mRowEvenHi = "roweven-hi";
+
+  /**
+  * Stores table properties
+  * @var array
+  */
+  var $mTableOptions;
+  
+  /*
+   * Stores the last header text inserted.
+   */
+  var $mLastHeader;
+
+  /**
+  * Constructor
+  * @param array $options
+  */
+  function __construct($options = false)
+  {
+    parent::__construct();
+
+    $this->SetTableOptions($options);
+  }
+
+  /**
+  * Adds an object to the objects' array and increases the main index
+  * @param string $what Reference to the object that will be added
+  */ 
+  function AddObject(&$what)
+  {
+    if (!isset($what->mLabel) && is_object($what)) $what->mLabel = $this->mLastHeader;
+    parent::AddObject($what);
+    $this->mObjects[$this->mIndex-1]->mMainForm = &$this->GetMainForm();
+    //$what->mMainForm = &$this->GetMainForm();
+  }
+
+  /*
+  * Run through all containers and return the first JForm Instance
+  * @returns JForm
+  */
+  function &GetMainForm()
+  {
+    $obj = &$this;
+    while($obj->GetContainer() !== null)
+    {
+      if ($obj->mType == "Form") return $obj;
+
+      $obj = &$obj->GetContainer();
+    }
+
+    return $this;
+  }
+
+  /**
+  * Sets options that will be used in the <table> tag
+  * @param array $options Associative array cotaining the table options. Eg.: array("width" => 200)
+  */
+  function SetTableOptions($options = false)
+  {
+    $this->mTableOptions = $options;
+  }
+
+  /**
+  * Sets table's alignment
+  * @param string [ left | right | center ]
+  */
+  function SetAlign($align)
+  {
+    $this->mAlign = $align;
+  }
+
+  /**
+  * Sets table's indentation
+  * @param integer Number of white spaces before any table tag.
+  */
+  function SetIndentation($length)
+  {
+    $this->mIndentation = $length;
+    $this->mSpace = "";
+    for ($i = 0; $i < $this->mIndentation; $i++)
+      $this->mSpace .= " ";
+  }
+
+  /**
+  * Sets table's border
+  * @param integer Table's border width
+  */
+  function SetBorder($border = false)
+  {
+    $this->mBorder = $border;
+  }
+
+  /**
+  * Sets table's width
+  * @param integer 
+  */
+  function SetWidth($width = false)
+  {
+    $this->mWidth = $width;
+  }
+
+  /**
+  * Sets table's cell padding
+  * @param integer
+  */
+  function SetCellPadding($cellpadding = false)
+  {
+    $this->mCellPadding = (is_int($cellpadding))?$cellpadding:false;
+  }
+
+  /**
+  * Sets table's cell spacing
+  * @param integer
+  */
+  function SetCellSpacing($cellspacing = false)
+  {
+    $this->mCellSpacing = (is_int($cellspacing))?$cellspacing:false;
+  }
+
+  /**
+  * Sets if the table must have even rows of one color and odd rows of other
+  * @param boolean
+  */
+  function SetStriped($striped = true)
+  {
+    $this->mStriped = $striped;
+  }
+
+  /**
+  * Sets whether there will be spaces beetwen cell tags
+  * @param boolean
+  */
+  function SetTightCell($tight)
+  {
+    if (is_bool($tight))
+      $this->mTightCell = $tight;
+  }
+
+  /**
+  * Sets line styles (used if the table is stripped)
+  * @param string $rowOdd The CSS class name used in the odd rows
+  * @param string $rowOddHi The CSS class name used to highlight the odd rows
+  * @param string $rowEven The CSS class name used in the even rows
+  * @param string $rowEvenHi The CSS class name used to highlight the even rows
+  */
+  function SetLineStyles($rowOdd, $rowOddHi, $rowEven, $rowEvenHi)
+  {
+    $this->mRowOdd    = $rowOdd;
+    $this->mRowOddHi  = $rowOddHi;
+    $this->mRowEven   = $rowEven;
+    $this->mRowEvenHi = $rowEvenHi;
+  }
+
+  /**
+  * Opens the table. 
+  *
+  * JForm class extends JTable, so if a JForm class is being instanciated, some form 
+  * specific tags are includes. Options is an associative array used to set things like 
+  * css, alignment. Ex.: array("width"=> 200)
+  * @param array $options
+  */
+  function OpenTable($options = false)
+  {
+    if ($this->mTableOpened)
+      $this->CloseTable();
+
+    $this->mTableOpened = true;
+
+    $out = "";
+
+    //$out .= "$this->mSpace<script language=\"JavaScript\" src=\"" . URL ."js/jutils.js\"></script>\n"; TODO
+    if ($this->mType == "Form")
+    {
+      $out .= "$this->mSpace<script>\nform_submitted = false;\n$this->mSpace form_submitted_keep = false\n</script>\n";
+      $out .= "$this->mSpace<form name=\"$this->mName\" action=\"$this->mAction\" ";
+      $out .= "$this->mSpace method=\"$this->mMethod\" ";
+      
+      $out .= "$this->mSpace OnSubmit=\"return ".$this->mName."Submit()";
+
+      if ( ($isMaintenance = ($this->mName == "maintenance")) )
+        $out .= " && avoidMultipleRequests".$this->mName."()";
+
+      $out .= "\"";
+      
+      $out .= "$this->mSpace target=\"$this->mTarget\" ";
+
+      $out .= "$this->mSpace enctype=\"".$this->mEnctype."\" ";
+
+      $out .= "$this->mSpace $this->mExtra>\n";
+      if ($isMaintenance)
+        $out .= "$this->mSpace ".$this->mAlreadySubmitted->GetHtml()."\n";
+      $out .= "$this->mSpace ".$this->mSubmitted->GetHtml();
+    }
+
+    $out .= "\n$this->mSpace<table class='JTable ".$this->MakeClass(($this->mClass?$this->mClass:""))." table-nonfluid'";//-nonfluid
+    if ($this->mAlign)
+      $out .= " align=\"$this->mAlign\"";
+    if ($this->mBorder or (!is_bool($this->mBorder)))
+      $out .= " border=\"$this->mBorder\"";
+    if ($this->mWidth or (!is_bool($this->mWidth)))
+      $out .= " width=\"$this->mWidth\"";
+    if ($this->mCellPadding or (!is_bool($this->mCellPadding)))
+      $out .= " cellpadding=\"$this->mCellPadding\"";
+    if ($this->mCellSpacing or (!is_bool($this->mCellSpacing)))
+      $out .= " cellspacing=\"$this->mCellSpacing\"";
+
+    if (is_array($options))
+    {
+      reset($options);
+      for ($i = 0; $i < sizeof($options); $i++)
+      {
+        //if (!$this->mStriped || ($this->mStriped && key($options) != "class") )
+          $out .= " ".key($options)."=\"".current($options)."\"";
+        next($options);
+      }
+    }
+
+    $out .= ">\n";
+
+    $this->AddHtml($out);
+  }
+
+  /**
+  * Closes the table. 
+  * 
+  * Automatically closes anything (headers, rows, cells) that might bo open inside of the table
+  */
+  function CloseTable()
+  {
+    if($this->mRowOpened)
+      $this->CloseRow();
+
+    $out = "";
+    if ($this->mTableOpened)
+    {
+      if ( strtolower( get_class($this) ) == "jform")
+        $out .= "</form>\n";
+
+      $out .= "$this->mSpace</table>";
+
+      $this->mTableOpened = false;
+
+      if ( strtolower( get_class($this) ) == "jform")
+        $out .= $this->GetJSOnSubmit();
+
+      if (!$this->mTightCell)
+        $out .= "\n\n";
+
+      $this->AddHtml($out);
+    }
+  }
+
+  /*
+  * Open space Thead.
+  */
+  function OpenThead()
+  {
+    if (!$this->mTableOpened)
+      $this->OpenTable($this->mTableOptions);
+
+    $this->mTheadOpened = true;
+
+    $this->AddHtml("<thead>");
+  }
+  
+  /*
+  * Close space Thead.
+  */
+  function CloseThead()
+  {
+    if ($this->mHeaderOpened)
+      $this->CloseHeader();
+
+    if ($this->mRowOpened)
+      $this->CloseRow();
+
+    $this->mTheadOpened = false;
+
+    $this->AddHtml("</thead>");
+  }
+  
+  /*
+  * Open space Tbody.
+  */
+  function OpenTbody()
+  {
+    if ($this->mHeaderOpened)
+      $this->CloseHeader();
+
+    if ($this->mRowOpened)
+      $this->CloseRow();
+
+    if ($this->mTheadOpened)
+      $this->CloseThead();
+    
+    $this->mTbodyOpened = true;
+
+    $this->AddHtml("<tbody>");
+  }
+  
+  /*
+  * Close space Tbody.
+  */
+  function CloseTbody()
+  {
+    if ($this->mRowOpened)
+      $this->CloseRow();
+
+    $this->mTbodyOpened = false;
+
+    $this->AddHtml("</tbody>");
+  }
+
+  /**
+  * Opens a table row. 
+  * @param array $options Options is an associative array used to set things like css, alignment. Ex.: array("width"=> 200)
+  */
+  function OpenRow($options = false)
+  {
+    $out = "";
+
+    $this->mRowNumber++;
+
+    if ($this->mRowOpened)
+      $this->CloseRow();
+
+    if (!$this->mTableOpened)
+      $this->OpenTable($this->mTableOptions);
+
+    $this->mRowOpened = true;
+
+    $out .= "$this->mSpace <tr";
+
+    if (is_array($options))
+    {
+      reset($options);
+      do
+      {
+        if (!$this->mStriped || ($this->mStriped && key($options) != "class") )
+          $out .= " ".key($options)."=\"".current($options)."\"";
+      }while(next($options));
+    }
+
+    if ($this->mStriped)
+    {
+      if (($this->mRowNumber % 2) == 0)
+        $out .= " class=\"$this->mRowEven\" onmouseover=\"javascript:this.className='$this->mRowEvenHi'\" onmouseout=\"javascript:this.className='$this->mRowEven'\"";
+      else
+        $out .= " class=\"$this->mRowOdd\" onmouseover=\"javascript:this.className='$this->mRowOddHi'\" onmouseout=\"javascript:this.className='$this->mRowOdd'\"";
+    }
+
+    $out .= ">\n";
+
+    $this->AddHtml($out);
+  }
+
+  /**
+  * Closes a row and everything (headers, cells) that might be open inside of it
+  */
+  function CloseRow()
+  {
+    if ($this->mCellOpened)
+      $this->CloseCell();
+
+    if ($this->mHeaderOpened)
+      $this->CloseHeader();
+
+    $this->mRowOpened = false;
+
+    $out = "$this->mSpace </tr>\n";
+
+    $this->AddHtml($out);
+  }
+
+  /**
+  * Opens a table header
+  * @param string $text The headers content
+  * @param array  $options An associative array containing header options. Eg.: array("valign" => "top")
+  */
+  function OpenHeader($text = "", $options = false)
+  {
+    $this->mLastHeader = $text;
+    
+    if ($this->mHeaderOpened)
+      $this->CloseHeader();
+
+    if ($this->mCellOpened)
+      $this->CloseCell();
+
+    if (!$this->mRowOpened)
+      $this->OpenRow();
+
+    $this->mHeaderOpened = true;
+
+    $out = "$this->mSpace  <th";
+
+    if (is_array($options))
+    {
+      reset($options);
+      do
+      {
+        $out .= " ".key($options)."=\"".current($options)."\"";
+      }while(next($options));
+    }
+
+    $out .= ">$text";
+
+    $this->AddHtml($out);
+  }
+
+  /**
+  * Closes a header
+  */
+  function CloseHeader()
+  {
+    $this->mCellOpened = $this->mHeaderOpened = false;
+
+    $out = "$this->mSpace</th>\n";
+
+    $this->AddHtml($out);
+  }
+
+  /**
+  * Opens a table cell
+  * @param string $text Cell's content
+  * @param array  $options An associative array containing cell options. Eg.: array("valign" => "top")
+  */
+  function OpenCell($text = "", $options = false)
+  {
+    if ($this->mCellOpened)
+      $this->CloseCell();
+
+    if ($this->mHeaderOpened)
+      $this->CloseHeader();
+
+    if (!$this->mRowOpened)
+      $this->OpenRow();
+
+    $this->mCellOpened = true;
+
+    $out = "$this->mSpace  <td";
+
+    if (is_array($options))
+    {
+      reset($options);
+      do
+      {
+        $out .= " ".key($options)."=\"".current($options)."\"";
+      }while(next($options));
+    }
+
+    if ($this->mTightCell)
+      $out .= ">$text";
+    else
+      $out .= ">\n$text\n";
+
+    $this->AddHtml($out);
+  }
+
+  /**
+  * Closes a cell
+  */
+  function CloseCell()
+  {
+    $this->mCellOpened = $this->mHeaderOpened = false;
+
+    if ($this->mTightCell)
+      $out = "</td>\n";
+    else
+      $out = "$this->mSpace  </td>\n";
+
+    $this->AddHtml($out);
+  }
+
+  /**
+  * Builds the table output
+  * @returns string
+  */
+  function GetHtml()
+  {
+    $this->CloseTable();
+
+    $tips = "";
+    $out = $this->GetMainContainerHtml();
+
+    for ($i = 0; $i < $this->mIndex; $i++)
+    {
+      if ($this->mObjects[$i]->mTip["tip"])
+      {
+        $tips .= "Tips[\"" . $this->mObjects[$i]->mName . "\"] = [\"" . $this->mObjects[$i]->mTip["title"] . 
+                "\", \"" . $this->mObjects[$i]->mTip["tip"] ."\"];\n";
+      }
+
+      if (is_object($this->mObjects[$i]))
+      {
+        $this->mObjects[$i]->MakeId(++$this->mId);
+        $out .= $this->mObjects[$i]->GetHtml();
+        $this->mId = $this->mObjects[$i]->MakeId();//avoid duplicate ids when using nested objects
+      }
+      else
+        $out .= $this->mTexts[$i];
+    }
+
+    if ($tips)
+      $out .= "<script language=\"JavaScript\">\n$tips\n</script>\n";
+
+    $out .= $this->GetMainContainerHtml("end");
+
+    return $out;
+  }
+}

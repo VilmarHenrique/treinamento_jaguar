@@ -1,0 +1,776 @@
+<?php
+/*
+Jaguar - A PHP framework for IT systems development
+Copyright (C) 2003  Atua Sistemas de Informação Ltda.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+You can contact Atua Sistemas de Informação Ltda by the e-mail jaguar@atua.com.br, or
+885 Quinze de Novembro street, Passo Fundo, RS 99010-100 Brazil
+
+Atua Sistemas de Informação Ltda., hereby disclaims all copyright interest in
+the library 'Jaguar' (A PHP framework for IT systems development) written
+by it's development team.
+
+Décio Mazzutti, 22 October 2003
+*/
+
+/**
+* Base class for many objects
+*
+* @author  Atua Sistemas de Informação
+* @since   2002-05-31
+* @package Jaguar
+*/
+
+require_once(JAGUAR_PATH . "JPrimitiveObject.php");
+require_once(JAGUAR_PATH . "jdbauth.inc.php");
+
+class JObject extends JPrimitiveObject
+{
+  /**
+  * Stores the object's name
+  * @var string
+  */
+  var $mName;
+
+  /**
+  * Stores strings that are inserted in a object
+  * @var array $mTexts 
+  */	
+  var $mTexts;
+
+  /**
+  * Stores extra HTML code
+  * @var string
+  */
+  var $mExtra;
+  
+  /**
+  * Stores objects ans strings index
+  * @var integer
+  */
+  var $mIndex    = 0;
+
+  /*
+  * Stores the message which will display when a user has no access permissions
+  */
+  var $tryAgainMessage; 
+
+  /**
+  * Controls whether the components held in this container shows a javascript date picker
+  * @var boolean
+  */
+  var $mUseDatePicker = true;
+
+  /**
+  * Stores the custom messages to be shown when operations in (insert, update, delete, select) fails
+  * @var string
+  */
+  var $mActionFailedMessage = array();
+
+  /** Stores common messages
+  * @var array
+  */
+  var $mMessages;
+
+  /**
+  * Controls whether the components appended to this container will change the focus through the key "Enter"
+  * to submit the form directly '+' and '=' keys will be used in order for the user to digit faster
+  * @var boolean
+  */
+  var $mUseEnterBesidesTab = false;
+
+  /**
+  * Stores if this container is the main application container, where all javascript will be placed
+  * @var bool
+  * @private
+  */
+  var $mIsMainContainer = true;
+
+  /**
+  * Stores if this container is TRUE and ONLY main application container
+  * @var bool
+  * @private
+  */
+  var $mIsTheOnlyMainContainer = false;
+
+  /**
+  * Stores wheather the container will use the jaguar stylesheet 
+  * @var boolean
+  * @private
+  */
+  var $mUseJaguarStyleSheet = true;
+
+  /**
+  * Stores wheather the container will use the jaguar javascript
+  * @var boolean
+  * @private
+  */
+  var $mUseJaguarJavaScript = true;
+
+  /**
+  * Controls the permissions of the user (JDBAuth object)
+  * @var object
+  */
+  var $mAuth;
+
+  /**
+  * Stores the authentication connection (JDBConnection object)
+  * @var string
+  */
+  var $mAuthConn;
+
+  /**
+  * Stores whether the application will use authentication method
+  * @var bool
+  */
+  var $mUseAuthentication = true;
+
+  /**
+  * Stores if this container keep error messages
+  * @var string
+  * @private
+  */
+  var $mAuthenticationError;
+
+  /**
+  * Stores the database connection (JDBConnection object)
+  * @var string
+  */
+  var $mConn;
+
+  /**
+  * Stores the view session control
+  * @var boolean
+  */
+  var $mSessionControl = false;
+
+  static public $useComponents = false;
+  
+  /**
+  * Constructor
+  */
+  function __construct()
+  {
+    $this->SetDefaultMessages();
+    $this->SetAuth($this->mUseAuthentication);
+  }
+
+  /**
+  * Adds an text to the texts' array and increases the main index
+  * @param string $what The string that will be added
+  */ 
+  function AddHtml($what, $position = "end")
+  {
+    $this->mTexts[$this->mIndex++] = $what;
+  }
+
+  /**
+  * Adds extra HTML code
+  * @param string $text The extra code that will be added (usually inside a tag)
+  */
+  function SetExtra($text = false)
+  {
+    $this->mExtra = ($text)?$text:"";
+  }
+
+  /**
+  * Connects signals to functions 
+  * @param string $signal Signal's name
+  * @param string $function Function's name
+  * @param string $params Associative array with the params
+  */
+  function ConnectSignal($signal, $function, $params = false)
+  {
+    $this->mSignalConnected[$signal][] = array("function" => $function,
+                                               "params"   => $params);
+  }
+
+  /**
+  * Executes a signal 
+  * @param string $signal Signal's name
+  * @param string $params Associative array whith the params
+  */
+  function RaiseSignal($signal, $params = false)
+  {
+    if (is_array($this->mSignalConnected[$signal]))
+    {
+      foreach ($this->mSignalConnected[$signal] as $function)
+      {
+        if (is_array($params) && is_array($function["params"]))
+          $all_params = array_merge($params, $function["params"]);
+        elseif (is_array($params))
+          $all_params = $params;
+        elseif (is_array($function["params"]))
+          $all_params = $function["params"];
+        else 
+          $all_params = array();
+
+        call_user_func_array($function["function"], $all_params);
+      }
+    }
+  }
+
+  /**
+  * Sets whether the components held in this container shows a javascript date picker
+  * @param boolean $use
+  */
+  function UseDatePicker($use = true)
+  {
+    $this->mUseDatePicker = $use;
+  }
+
+  /**
+  * Sets whether the components appended to this container will change the focus through the key "Enter"
+  * to submit the form directly '+' and '=' keys will be used in order for the user to digit faster
+  * @param boolean $use
+  */
+  function UseEnterBesidesTab($use = true)
+  {
+    $this->mUseEnterBesidesTab = $use;
+  }
+
+  /*
+  * Validate whether the user have permission to execute an action
+  * @param $action the action which the permission will be tested (insert, update, delete)
+  * @param mixed (JDBConn or JDBAuth) $connOrAuth
+  * @returns boolean
+  */
+  function HasPermissionTo($action, $connOrAuth = false)
+  {
+    $return = true;
+
+    if (strtolower(get_class($this)) != "jtable")
+    {
+      if ($this->mUseAuthentication)
+      {
+
+        //avoid infinite loop on JTable, what happen is that 
+        //Any Object -> GetHtml -> ValidatePermission -> !HasPermissionTo -> Table GetHtml -> infinite Loop
+        //* this is because JTable is used (in ValidatePermission) for showing a customized output instead of simple text 
+        //
+        if ( $this->mName == "errorTable" )
+          return true;
+        //If the user is logged in
+        //
+        if ($_SESSION["jaguar_username"])
+        {
+          $function = "Can".$action;
+          $failMessage  = "";
+
+          $auth = "";
+
+          if (is_a($connOrAuth , "JDBConn"))
+            $auth = new JDBAuth($connOrAuth);
+          else
+          {
+            //Only internal classes will pass an JDBAuth as parameter so the message only ask to pass an JDBConn argument
+            //
+            if (!is_a($connOrAuth , "JDBAuth"))//TODO error system
+              exit("Erro: Um objeto do tipo JDBConn deve ser passado como segundo parâmetro em HasPermissionTo"); 
+
+            $auth = &$connOrAuth;
+          }
+
+          //check the permission
+          //
+          if (!$auth->$function())
+          {
+            //In case of error sets an default error message or an personal one set in 'SetActionFailMessage'
+            //
+            if ($this->mActionFailedMessage[$action])
+              $failMessage = $this->mActionFailedMessage[$action]; 
+            else
+              $failMessage = $this->mMessages["permission_".$action];
+
+            //inform the error
+            //
+            $this->mAuthenticationError = $failMessage;
+            $return = false;
+          }
+        }
+        else
+        {
+          //return true to some pages which are set as validated to can use jaguar and because user will never
+          //be logged in in such cases like login page 
+          //
+          //also return true if a script was called by crontab
+          //
+          if (!$_SERVER["REQUEST_METHOD"])
+            return true;
+
+          //Do not make the same validation several times
+          //
+          if ($action == "select" && JDBAuth::IsValidated($this->mScript))
+            return JDBAuth::IsValid($this->mScript);
+
+          //set default error message
+          //
+          $this->mAuthenticationError = $this->mMessages["permission_denied"].$this->GetTryAgainMessage();
+
+          $return = false;
+        }
+      }//if ($this->mUseAuthentication)
+
+      //set as already validated
+      if ( $action == "select") 
+        JDBAuth::SetValidated($this->mScript, $return);
+    }//if (get_class($this) != "JTable")
+
+    return $return;
+  }
+
+  /*
+  * Default validattion method used in the constructor of all inherited classes
+  * @param JDBConn $conn
+  */
+  function ValidatePermission(&$conn, $permission="select")
+  {
+    //Validate Parameter
+    //
+    if (!is_a($conn, "JDBConn"))//TODO error system
+        exit('Erro: Uma objeto $conn do tipo JDBConn deve ser declarado no escopo principal!'); 
+
+    if ( !$this->HasPermissionTo($permission, $conn) )
+    { 
+      $table = new JTable();
+      $table->mName = "errorTable";
+      $table->OpenRow('');
+      $table->OpenCell($this->mAuthenticationError);
+
+      exit("<center>". $table->GetHtml() . "</center>");
+    }
+
+    return true;
+  }
+
+  /**
+  * Sets the message which will appears when an action in (insert, update, delete, select) fails
+  * @param string $action
+  * @param string $message
+  */
+  function SetActionFailMessage($action, $message)
+  {
+    $this->mActionFailedMessage[$action] =  "<font color=\"gray\">".$message."</font>";
+  }
+
+  /**
+  * Returns the try again message
+  * sometimes the login file is not in the current directory so we need to find it
+  * @returns string
+  */
+  function GetTryAgainMessage()
+  {
+    $loginPage = "login.php";
+
+    for ($i = 0; $i < 2; $i++)
+    {
+      if (!file_exists($loginPage))
+        $loginPage = "../".$loginPage;
+      else
+        break;
+    }
+
+    $this->tryAgainMessage = ' - Você não está logado ao sistema! &nbsp;&nbsp;<a href="#" onClick="javascript: if (top.pop) top.pop.close(); top.pop = pop_open(\''.$loginPage.'?f_popup=true\', 350, 200, \'Login\', \'no\');">[Logar Novamente]</a>';
+
+    return $this->tryAgainMessage;
+  }
+
+  /**
+  * Sets default messages
+  */
+  function SetDefaultMessages()
+  {
+    $this->mMessages["permission_denied"]  = "<font color=\"red\"><b>Permissão Negada!</b></font>";
+    $this->mMessages["permission_insert"] = "<font color=\"gray\">Sem Permissão para Inserir </font>";
+    $this->mMessages["permission_delete"] = "<font color=\"gray\">Sem Permissão para Excluir </font>";
+    $this->mMessages["permission_update"] = "<font color=\"gray\">Sem Permissão para Atualizar </font>";
+    $this->mMessages["permission_select"] = "<font color=\"gray\">Sem Permissão para Selecionar </font>";
+    $this->mAuthenticationError = $this->mMessages["permission_denied"].$this->GetTryAgainMessage();
+  }
+
+
+
+  /**
+  * return an object reference by its name
+  * @param string $name
+  * @returns object
+  */
+  function &GetObjectByName($name)
+  {
+    reset($this->mObjects);
+    do
+    {
+      $obj = &current($this->mObjects);
+
+      if (is_object($obj) && $obj->mName == $name)
+        return $obj;
+
+    } while(next($this->mObjects));
+
+    return false;
+  }
+
+  /**
+  * Sets an object as a main container 
+  * @param boolean $bool
+  */
+  function SetAsMainContainer($bool = true)
+  {
+    $this->mIsMainContainer = $bool;
+  }
+
+  /*
+  * Return the menu configuration javascript
+  * @returns string
+  */
+  function GetMenuJavascript()
+  {
+    $out = "<script type='text/javascript'>";
+            
+    //new javascript menu instances
+    foreach($this->mMenusArray as $menuItem)
+    {
+      $out .= "var ".$menuItem->mName." = new FSMenu('".$menuItem->mName."', true, 'display', 'block', 'none');
+    addEvent(window, 'load', new Function('activePageHighlight(\'".$menuItem->mName."Root\')'));
+    addEvent(".$menuItem->mName.", 'show', repositionMenus, true);\n";
+    }
+
+    /*    
+      * This items can be extra parameters
+    ".$menuItem->mName.".showDelay = 0;
+    ".$menuItem->mName.".switchDelay = 125;
+    ".$menuItem->mName.".hideDelay = 500;
+    //".$menuItem->mName.".cssLitClass = 'highlighted';
+    ".$menuItem->mName.".showOnClick = 0;
+    ".$menuItem->mName.".hideOnClick = true;
+    ".$menuItem->mName.".animInSpeed = 0.2;
+    ".$menuItem->mName.".animOutSpeed = 0.2;
+    */
+    foreach($this->mMenusArray as $menuItem)
+    {
+      if ($this->IsIE())
+      {
+        $out .= $menuItem->mName.".switchDelay = 125;\n";
+        $out .= $menuItem->mName.".hideDelay = 500;\n";
+      }
+            else
+      {
+        $out .= $menuItem->mName.".switchDelay = 0;\n";
+        $out .= $menuItem->mName.".hideDelay = 0;\n";
+      }
+
+      $out .= $menuItem->mName.".animInSpeed = 1;\n";
+      $out .= $menuItem->mName.".animOutSpeed = 1;\n";
+    }
+
+    //set default animation type 
+//    foreach($this->mMenusArray as $menuItem)
+//      if ($menuItem->mUseEasing)
+//        $out .= $menuItem->mName.".animations[".$menuItem->mName.".animations.length] = FSMenu.animFade;\n";
+   
+    /*
+    * Other animations
+    //".$menuItem->mName.".animations[".$menuItem->mName.".animations.length] = FSMenu.animSwipeDown;
+    //".$menuItem->mName.".animations[".$menuItem->mName.".animations.length] = FSMenu.animClipDown;
+    */
+
+    $out .= "
+      var arrow = null;
+      if (document.createElement && document.documentElement)
+      {
+       arrow = document.createElement('span');
+       arrow.appendChild(document.createTextNode('>'));
+       // Feel free to replace the above two lines with these for a small arrow image...
+       //arrow = document.createElement('img');
+       //arrow.src = 'arrow.gif';
+       //arrow.style.borderWidth = '0';
+       arrow.className = 'subind';
+      }\n\n";
+
+    foreach($this->mMenusArray as $menuItem)
+      $out .=" addEvent(window, 'load', new Function('".$menuItem->mName.".activateMenu(\'".$menuItem->mName."Root\', arrow)'));\n";
+
+    $out .= "\n</script>";
+
+    return $out;
+  }
+
+  function UseJaguarStyleSheet($use)
+  {
+    $this->mUseJaguarStyleSheet = (boolean) $use;
+  }
+
+  function UseJaguarJavaScript($use)
+  {
+    $this->mUseJaguarJavaScript = (boolean) $use;
+  }
+
+  /**
+  * Sets authentication connection
+  * @param string $table
+  */
+  function SetAuthConn (&$conn)
+  {
+    $this->mAuthConn = &$conn;
+    if ($this->mUseAuthentication)
+      $this->SetAuth(true);
+  }
+
+
+  /**
+  * Controls if the application will use authentication or not
+  * @param boolean $useAuthentication
+  */
+  function SetAuth($useAuthentication = false)
+  {
+    global $conn;
+
+    $this->mUseAuthentication = (boolean) $useAuthentication; 
+
+    if (!$this->mConn)
+    {
+
+      // make sure the object will have a connection handler when it needs one
+      //
+      if (!$conn && $this->mUseAuthentication)
+        exit('Error: jobject.inc.php, Method SetAuth requires an "$conn" object to be declared as global in the main scope');
+
+      // sets the connection handler
+      //
+      $this->mConn = &$conn;
+    }
+
+    // sets the authentication handler
+    //
+    if ($this->mUseAuthentication)
+      $this->mAuth = new JDBAuth(($this->mAuthConn)?$this->mAuthConn:$this->mConn);
+
+    // in case that the authentication doesn't need to be applied, just inform the main container of this
+    // ('cause its the one which will really care about this)
+    //
+    else
+    {
+      // this is also reinforced in UpdateAttachments
+      //
+      $parent = &$this->GetMainContainer();
+      if ($parent) $parent->SetAuth(false);
+    }
+      
+  }
+
+  /*
+    * Sets the object's container
+    @param object $obj
+  */
+  function SetContainer(&$obj)
+  {
+    //Defines the main container of the application 
+    //(some things can't be duplicated so it only will appear in the GetHtml of the main application container)
+    //
+    if ($obj->mIsTheOnlyMainContainer === false) //Default value false so it become true
+      $obj->mIsTheOnlyMainContainer = true;
+
+    if (is_subclass_of($this, "JObject"))
+    {
+      $this->mIsTheOnlyMainContainer = null;
+      $this->mIsMainContainer = false;
+    }
+  
+    parent::SetContainer($obj);
+  }
+
+  /**
+  * return the  
+  * @param string $myPosition, The position in the html page ("begin" or "end"), default is "begin"
+  */
+  function GetMainContainerHtml($myPosition = "begin")
+  {
+    if (!$this->mIsMainContainer)
+      return;
+
+    $this->ValidatePermission( $this->mConn );
+
+    if ($myPosition == "end")
+      return $this->GetJSFiles($myPosition).$this->GetJS($myPosition);
+    else
+      if ($myPosition != "begin")
+        exit("Error: position might be in (begin ,end) in GetMainContainerHtml.");
+
+    $out = "";
+
+    /*
+      **it happens for compatibility reasons where 
+      some apps doesn't attach any object and still need to have scripts like CSS styles attached to it,
+      and in the other hand some javascript applications can't have javascript duplicated such may use event listening 
+      like "document.oumousemove". so this variable stores whether the container is a main container
+      AND is the only which will keep this kind of scripts.
+    */
+    if ($this->mIsTheOnlyMainContainer)
+    {
+      if ($this->displayInformationWindows)
+        $this->GetWindowData();
+    }
+
+    if ($this->mUseJaguarJavaScript) 
+    {
+      $arrJS = array();
+
+      if (defined('BASE_URL'))
+        $arrJS["var BASE_URL = '" . BASE_URL . "';"] = "begin";
+
+      $arrJS["var API_URL = '" . URL . "AjaxIframe.php';"] = "begin";
+
+      $this->mJS = array_merge($arrJS, $this->mJS);
+
+      $this->AddJSFile(URL . "jaguar-ui/dist/jaguar.utils.js" );
+
+      if ($this->jQuery)
+      {
+        if ($this->mUseJaguarStyleSheet)
+          $this->AddJSFile(URL . "jaguar-ui/dist/jaguar.all.js");
+        else
+          $this->AddJSFile(URL . "jaguar-ui/dist/jaguar.js");
+
+        if (self::$useComponents)
+          $this->AddJSFile(URL . "jaguar-ui/dist/jaguar.components.js");
+
+        $this->AddJs("
+          $(document).ready(function()
+          {
+            $(document).bind('keypress keydown', function(e)
+            {
+              if (e.keyCode == '27')
+              {
+                e.preventDefault();
+                return false;
+              }
+            });
+            
+            if ($('body').height() < window.innerHeight)
+              $('body').height((window.innerHeight - 20));
+          });
+        ");
+        
+        if (current(explode("_", $_SERVER["PHP_SELF"])) != "ifr" && $this->mSessionControl)
+        {
+          $this->AddJS("
+            $(document).ready(function(){
+              if (self.location.toString().indexOf(parent.location.toString()) == -1)
+              {
+                handleUserEvent = function(){
+                  top.$(top.document).trigger('keydown.idleTimer');
+                }
+
+                var events = 'mousemove keydown DOMMouseScroll mousewheel mousedown touchstart touchmove';
+                $(document).bind($.trim((events+' ').split(' ').join('.idleTimer ')),handleUserEvent); 
+              }
+              else
+              {
+                $('#reset_session').dialog({
+                  autoOpen: false,
+                  modal: true,
+                  closeOnEscape: false,
+                  resizable: false,
+                  width: 250,
+                  modal: true, 
+                  buttons: {
+                    'Continuar logado': function(){
+                      $(this).dialog('close');
+                    },
+                    'Deslogar': function(){
+                      window.location = 'logout.php';
+                    }
+                  }, 
+                  open: function(event, ui){
+                    $('.ui-dialog-titlebar').hide();
+                  }
+                });
+                
+                option = {width: 280, height: 200, modal: true, autoOpen: false, draggable: false, resizable: false, close:false};
+                $('#login').dialog(option);
+                $('#login').dialog({
+                  open: function(event, ui) {
+                    $('.ui-widget-overlay').attr('style', 'background: #000;');
+                    $('.ui-dialog-titlebar').show();
+                    $.get('" . BASE_URL . "logout.php');
+                    $(this).find('iframe').attr('src', '" . BASE_URL . "login.php?f_iframe=1');
+                  },
+                  close: function(event, ui){
+                    if (getCookie('logado') == '1')
+                      $('div.ui-dialog-buttonpane button:first').click();
+                  }
+                });
+                
+                $.idleTimeout('#reset_session', 'div.ui-dialog-buttonpane button:first', {
+                  idleAfter: " . (ini_get('session.gc_maxlifetime')/2) . ", 
+                  warningLength: " . ini_get('session.gc_maxlifetime') . ", 
+                  pollingInterval: " . (ini_get('session.gc_maxlifetime')-5) . ",
+                  keepAliveURL: '" . BASE_URL . "lib/jaguar/start.php',
+                  serverResponseEquals: 'OK', 
+                  onTimeout: function(){
+                    $('#reset_session').dialog('close');
+                    $('#login').dialog('open');
+                  },
+                  onIdle: function(){
+                    setCookie('logado', 0, 3600);
+                    $(this).dialog('open');
+                  },
+                  onCountdown: function(counter){
+                    if (getCookie('logado') == '0')
+                      $('#time_session').html(counter);
+                    else
+                      $('div.ui-dialog-buttonpane button:first').click();
+                  },
+                  onResume: function(){
+
+                  }
+                });
+              }
+            });
+          ");
+        }
+      }
+    }
+
+    if ($this->mUseJaguarStyleSheet)
+      $this->AddCSSFile( URL ."style.css" );
+
+    $out .= $this->GetCSSFiles();
+    $out .= $this->GetJSFiles($myPosition);
+    $out .= $this->GetCSS();
+    $out .= $this->GetJS($myPosition);
+
+    if (sizeof($this->mMenusArray) > 0)
+      $out .= $this->GetMenuJavascript();
+
+    return $out;
+  }
+  
+  /**
+  * Return the mText string only
+  * @returns string
+  */
+  function GetHtml()
+  {
+    $out = "";
+
+    for ($i = 0; $i < $this->mIndex; $i++)
+      if (isset($this->mTexts[$i])) $out .= $this->mTexts[$i];
+
+    return $this->GetRawHtml($out);
+  }
+}

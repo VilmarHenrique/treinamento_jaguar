@@ -1,0 +1,426 @@
+<?php
+/*
+Jaguar - A PHP framework for IT systems development
+Copyright (C) 2003  Atua Sistemas de InformaÁ„o Ltda.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+You can contact Atua Sistemas de InformaÁ„o Ltda by the e-mail jaguar@atua.com.br, or
+885 Quinze de Novembro street, Passo Fundo, RS 99010-100 Brazil
+
+Atua Sistemas de InformaÁ„o Ltda., hereby disclaims all copyright interest in
+the library 'Jaguar' (A PHP framework for IT systems development) written
+by it's development team.
+
+DÈcio Mazzutti, 22 October 2003
+*/
+
+/*
+ * creation - 2003-02-20 - decio
+ *
+ * 2003-05-10 - decio
+ *  criado a funÁ„o SetNumberRow(), permitindo dividir o Mestre Detalhe em qtas linhas desejar
+ *
+ */
+
+/**
+* Master/detail creation class
+*
+* @author  Atua Sistemas de InformaÁ„o
+* @since   2003-02-20
+* @package Jaguar
+*/
+class JMasterDetail extends JTable
+{
+  /**
+  * Stores object's type
+  * @var string
+  */
+  var $mType = "JMasterDetail";
+
+
+  /**
+  * Stores the locations for each tab
+  * var array
+  */
+  var $mObject = array();
+
+  /**
+  * Stores the tab that will receive the focus if the keys array hadn't been totally filled
+  * var array
+  */
+  var $mDefaultFile;
+
+  /**
+  * Stores the number of tab rows
+  * var array
+  */
+  var $mNumberRow = 1;
+
+  /**
+  * Stores if the JMasterDetail will have it's detail labels sort
+  * var boolean
+  */
+  var $mSortLabels = true;
+
+  /**
+  * Stores an Array with Label and position in (BEGIN, END)
+  * var array
+  */
+  var $mPositioned = array();
+
+  /**
+  * Stores whether the positioning in the shown order might be by label (true) or by file name (false)
+  * var boolean
+  */
+  var $mPositionedByLabel; 
+
+  /**
+  * Constructor
+  */
+  function __construct()
+  {
+    global $conn;
+
+    parent::__construct();
+//    $this->SetWidth(750);
+    $this->MakeClass("table-md");
+    $this->SetLineStyles("roweven", "rowodd", "roweven", "rowodd");
+  }
+
+  /**
+  * Adds the master/detail array
+  * @param array $array
+  */
+  function AddMasterDetail($parameters = false)
+  {
+    global $conn;
+    
+    if (is_array($parameters))
+    {
+      $qt_md = sizeof($parameters);
+      for ($i = 0; $i < $qt_md ; $i++)
+      {
+        $aux = $parameters[$i][0];
+        $aux = substr($aux, strpos($aux, "_"));
+        $arr_function[] = substr($aux, 1, strrpos($aux, ".")-1);
+      }
+      
+      $sql = "SELECT functionname
+                FROM jaguar_auth
+               WHERE functionname IN ('" . implode("', '", $arr_function) . "') ";
+      
+      if (!$rs = $conn->Select($sql))
+        echo $conn->GetError(true);
+      elseif($rs->GetRowCount() > 0)
+      {
+        while (!$rs->IsEof())
+        {
+          for ($i = 0; $i < $qt_md ; $i++)
+          {
+            $aux = $parameters[$i][0];
+            $aux = substr($aux, strpos($aux, "_"));
+            if ($rs->GetField("functionname") == substr($aux, 1, strrpos($aux, ".")-1))
+              $this->mObject[ucfirst($parameters[$i][1])] = array("file"  => $parameters[$i][0],
+                                                                  "key"   => $parameters[$i][2],
+                                                                  "field" => $parameters[$i][3]);
+            
+          }
+          
+          $rs->Next();
+        }
+      }
+    }
+  }
+
+  /**
+  * Sets the default file of master/detail
+  * @param string $defaultFile
+  */
+  function SetDefaultFile($defaultFile = false)
+  {
+    $this->mDefaultFile = $defaultFile;
+  }
+
+  /**
+  * Sets wheter labels will be sorted
+  * @param boolean $sort
+  */
+  function UseSort($sort = true)
+  {
+    $this->mSortLabels = $sort;
+  }
+
+  /**
+  * Sets an Array with file name and position in (BEGIN, END)
+  * $this->SetPositionArray(array("Label" => "END", "LABEL2" => "BEGIN")); 
+  * @param array $arr
+  * @param array $positionedByLabel = true
+  *
+  * OBS: You may also need to set a position through the name of the file so the second parameter should be false
+  and you array will be like $this->SetPositionArray(array("man_something.php" => "END", "man_another.php" => "BEGIN"));
+  */
+  function SetPositionArray($arr, $positionedByLabel = true)
+  {
+    $this->mPositioned = &$arr;
+    $this->mPositionedByLabel = (bool) $positionedByLabel;
+  }
+
+  /**
+  * Sets the number of rows of the master/detail
+  * @param number $numberRow
+  */
+  function SetNumberRow($numberRow)
+  {
+    if (is_numeric($numberRow))
+      $this->mNumberRow = $numberRow;
+  }
+
+  /**
+  * Builds JS Code
+  */
+  function BuildJsCode()
+  {
+    $js = "<script>";
+
+    foreach($this->mObject as $label => $detail)
+    {
+
+      if (is_array($detail["key"]))
+      {
+        $arr_trans = array("-" => "", "/" => "", " " => "", "." => "");
+
+        $js .= "\n";
+        $label = trim(strtr($label, "·‡„‚ÈÍÌÛÙı˙¸Á¡¿√¬… Õ”‘’⁄‹« ","aaaaeeiooouucAAAAEEIOOOUUC_"));
+        $js .= "function CheckKey".strtr($label, $arr_trans);
+        $js .= "(";
+
+        $js_tmp = "";
+
+        for($j = 0; $j < sizeof($detail["key"]); $j++)
+        {
+          $js     .= $js_tmp.$detail["key"][$j];
+          $js_tmp = ", ";
+        }
+
+        $js .= ")\n";
+        $js .= "{\n";
+        $js .= "  erro = false;\n\n";
+
+        for($j = 0; $j < sizeof($detail["key"]); $j++)
+        {
+          $parameter = $detail["key"][$j];
+
+          $js .= "  if ($parameter.length == 0)\n";
+          $js .= "    erro = true;\n\n";
+        }
+
+        $js .= "  if (erro)\n";
+        $js .= "  {\n";
+        $js .= "    alert('Campo chave sem valor!');\n";
+        $js .= "    return false;\n";
+        $js .= "  }\n";
+        $js .= "}\n";
+
+      }//if (is_array($detail["key"]))
+
+    }//foreach($this->mObject as $label => $detail)
+    
+    $js .= "</script>\n\n";
+
+    return $js;
+  }
+  
+  /**
+  * Builds master/detail's output
+  * @returns string
+  */
+  function GetHtml()
+  {
+    /*
+      * Sort elements by Label
+    */
+    if ($this->mSortLabels)
+    {
+      function cmp($a, $b) { 
+         return strcasecmp(JFormText::RemoveSpecialChars($a), $b); 
+      }
+
+      uksort($this->mObject, "cmp");
+    }
+
+    /*
+      * Alter the position of some elements
+    */
+    $element = array();
+
+    foreach($this->mObject as $label => $detail)
+    {
+      foreach ($detail["key"] AS $value)
+      {
+        if (!strlen($GLOBALS[$value]))
+          return false;
+      }
+      
+      if ($detail["file"] == $this->mDefaultFile)
+      {
+        $element = array($label => $detail);
+        unset($this->mObject[$label]);
+      }
+      else
+      {
+        if ($this->mPositionedByLabel === null)
+          continue;
+
+        //initialize variable
+        $positionItem = false;
+
+        if ($this->mPositionedByLabel)
+          $myComparationValue = &$label; //Positioned by Label 
+        else
+          $myComparationValue = &$detail["file"]; //Positioned by File Name
+
+
+        foreach($this->mPositioned as $fileName => $position)
+        {
+          if ($myComparationValue == $fileName)
+          {
+            $positionItem = $position;
+            break;
+          }
+        }
+
+        //Reposition this element
+        if ($positionItem)
+        {
+          //if might be positioned remove from its current array position
+          unset($this->mObject[$label]);
+
+          //now place it in the begin or end of the array
+          switch ($positionItem)
+          {
+            case "BEGIN":
+              $this->mObject = array_merge(array($label => $detail), $this->mObject);
+            break;
+
+            case "END":
+              $this->mObject = array_merge($this->mObject, array($label => $detail));
+            break;
+          }
+        }
+        
+      }
+
+
+    }
+
+    /*
+      * Always place $this->mDefaultFile in the first position
+    */
+    $this->mObject = array_merge($element, $this->mObject);
+
+    $this->AddHtml("<br>");
+    $this->OpenRow();
+ 
+    $cell_options_tmp = array("align" => "center");
+    $resto   = (sizeof($this->mObject) % $this->mNumberRow);
+    $row     = floor(sizeof($this->mObject) / $this->mNumberRow);
+    $row_tmp = floor(sizeof($this->mObject) / $this->mNumberRow);
+    $row     += ($resto>1)?1:$resto;
+
+    $file = $_SERVER["SCRIPT_FILENAME"];
+    $ini  = (strrpos($file, "/")) ? strrpos($file, "/") + 1 : 0;
+    $file = substr($file, $ini);
+    $file = substr($file, 0, strpos($file, ".php") + 4);
+
+    $i=0;
+    foreach($this->mObject as $label => $detail)
+    {
+      $out = "<a style='color: #666666' href=\"".$detail["file"]."?use_md=true";
+      
+      if (is_array($detail["key"]))
+      {
+        $arr_trans = array("-" => "", "/" => "", " " => "", "." => "");
+        $separator = "";
+        $js        = "";
+
+        //keys
+        for($j = 0; $j < sizeof($detail["key"]); $j++)
+        {
+          $key    = $detail["key"][$j];
+
+          if (strpos($_SERVER["PHP_SELF"], $this->mDefaultFile) === false)
+          {
+            if (!strlen($_REQUEST[$key]))
+              header("Location: ".$this->mDefaultFile);
+          }
+          
+          $out       .= "&".$detail["key"][$j]."=".$_REQUEST[$key];
+          $js        .= $separator."'".$_REQUEST[$key]."'";
+          $separator = ", ";
+        }
+
+        //fields
+        if (is_array($detail["field"]))
+        {
+            for($j = 0; $j < sizeof($detail["field"]); $j++)
+            {
+              $field = $detail["field"][$j];
+              $out .= "&".$detail["field"][$j]."=".$GLOBALS[$field];
+            }
+        }
+        
+      }//foreach($this->mObject as $label => $detail)
+  
+      $out .= "\"";
+
+      if (is_array($detail["key"]))
+      {
+        $lab = trim(strtr($label, "·‡„‚ÈÍÌÛÙı˙¸Á¡¿√¬… Õ”‘’⁄‹« ","aaaaeeiooouucAAAAEEIOOOUUC_"));
+        $out .= " OnClick=\"javascript: return CheckKey".strtr($lab, $arr_trans)."(".$js.");\"";
+      }
+      if (strpos($detail["file"], $file) !== false)
+        $out .= "><div class='btn btn-default btn-sm-jaguar'><b>".$label."</b></div></a>";
+      else
+        $out .= "><div class='btn btn-default btn-sm-jaguar'>".$label."</div></a>";
+      
+      //cell_options
+      if (($i + 1) == sizeof($this->mObject))
+      {
+        $arr_options  = array("colspan" => ( ($row * $this->mNumberRow) - sizeof($this->mObject) + 1));
+        $cell_options = array_merge($cell_options_tmp, $arr_options);
+      }
+      else
+        $cell_options = $cell_options_tmp;
+      
+      //rows
+      if (($this->mNumberRow > 1) && (($i % $row) == 0))
+        $this->OpenRow(array("class" => ""));
+
+      $this->OpenCell($out, array_merge($cell_options));
+      $i++;
+    }//for($i = 0; $i < sizeof($this->mObject); $i++)
+
+    $this->CloseRow();
+    $this->CloseTable();
+
+    $out = $this->BuildJsCode();
+    
+    //pega o GetHtml do JTable
+    $out .= parent::GetHtml();
+
+    return $out;
+  }
+}

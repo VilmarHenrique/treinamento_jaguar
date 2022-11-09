@@ -1,0 +1,704 @@
+<?php
+/*
+Jaguar - A PHP framework for IT systems development
+Copyright (C) 2003  Atua Sistemas de Informação Ltda.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+You can contact Atua Sistemas de Informação Ltda by the e-mail jaguar@atua.com.br, or
+885 Quinze de Novembro street, Passo Fundo, RS 99010-100 Brazil
+
+Atua Sistemas de Informação Ltda., hereby disclaims all copyright interest in
+the library 'Jaguar' (A PHP framework for IT systems development) written
+by it's development team.
+
+Décio Mazzutti, 22 October 2003
+*/
+
+require_once(JAGUAR_PATH . "jobject.inc.php");
+
+/**
+* Html creation class
+*
+* @author  Atua Sistemas de Informação
+* @since   2002-05-31
+* @package Jaguar
+*/
+class JHtml extends JObject
+{
+  /**
+  * Stores object's type
+  * @var string
+  */
+  var $mType = "Html";
+
+  /**
+  * Stores the page's title
+  * @var string 
+  */
+  var $mTitle         = "Foo Page";
+  
+  /**
+  * Stores body options
+  * @var array An associative array containing body options' names and values. Eg.: "textcolo" => "black"
+  */
+  var $mBodyOptions   = array();
+  
+  /**
+  * Controls if the body tag is used 
+  * @var boolean
+  */
+  var $mHasBody       = true;
+  
+  /**
+  * Stores a master/detail object
+  * @var JMasterDetail
+  */
+  var $mMasterDetail;
+  
+  /**
+  * Stores the page's alignment
+  * @var string
+  */
+  var $mAlign         = "center";
+  
+  /**
+  * Controls if the total charge's time must be shown 
+  * @var boolean
+  */
+  var $mShowChargeTime= false;
+  
+  /**
+  * Stores the charge time
+  * @var array
+  */
+  var $mChargeTime= false;
+  
+  /*
+   * Stores forms
+   * @var array
+   */
+  var $mPermissionFields;
+
+  /*
+   * Show the showBreadcrumbs in top of page
+   * @var int 
+   */
+  var $showBreadcrumbs = true;  
+  
+  /**
+  * Constructor
+  * @param string $title Page's title
+  */
+  function __construct($title = false, $jQuery = true, $sessionControl = false)
+  {
+    global $conn;
+
+    parent::__construct();
+    $this->jQuery = $jQuery;
+
+    if ($_GET["jQuery"] == "0" || $_POST["jQuery"] == "0")
+      $this->jQuery = false;
+    
+    $this->mSessionControl = $sessionControl;
+    
+    $this->mChargeTime[] = $this->GetMicroTime();
+     
+    $this->SetTitle($title);
+    $this->SetBgColor();
+    $this->SetTextColor();
+    $this->SetLinkColor();
+    $this->SetVLinkColor();
+    $this->SetALinkColor();
+    $this->SetTopMargin(5);
+    $this->SetMarginWidth();
+    $this->SetLeftMargin();
+    $this->SetMarginHeight(5);
+  }
+
+  /**
+  * Sets the page's title
+  * @param string $title Page's title
+  */
+  function SetTitle($title = false)
+  {
+    $this->mTitle = ($title)?$title:"Foo Page";
+  }
+
+  /**
+  * Sets the page's bgcolor
+  * @param string $bgcolor Page's bgcolor
+  */
+  function SetBgColor($bgcolor = false)
+  {
+    $this->mBodyOptions["bgcolor"]  = ($bgcolor)?$bgcolor:"FFFFFF";
+  }
+
+  /**
+  * Sets the color of the texts of the page
+  * @param string $textcolor
+  */
+  function SetTextColor($textColor = false)
+  {
+    $this->mBodyOptions["text"]  = ($textColor)?$textColor:"000000";
+  }
+
+  /**
+  * Sets the color of the links of the page
+  * @param string $linkcolor
+  */
+  function SetLinkColor($linkColor = false)
+  {
+    $this->mBodyOptions["link"]  = ($linkColor)?$linkColor:"000000";
+  }
+
+  /**
+  * Sets the color of the vlinks of the page
+  * @param string $vlinkcolor
+  */
+  function SetVLinkColor($vLinkColor = false)
+  {
+    $this->mBodyOptions["vlink"]  = ($vLinkColor)?$vLinkColor:"000000";
+  }
+
+  /**
+  * Sets the color of the alinks of the page
+  * @param string $alinkcolor
+  */
+  function SetALinkColor($aLinkColor = false)
+  {
+    $this->mBodyOptions["alink"]  = ($aLinkColor)?$aLinkColor:"000000";
+  }
+
+  /**
+  * Sets the value of the top_margim of the page
+  * @param string $topmargim
+  */
+  function SetTopMargin($topMargin = false)
+  {
+    $this->mBodyOptions["topmargin"]  = ($topMargin)?$topMargin:0;
+  }
+
+  /**
+  * Sets the value of the margim_width of the page
+  * @param string $margimwidth
+  */
+  function SetMarginWidth($marginWidth = false)
+  {
+    $this->mBodyOptions["marginwidth"]  = ($marginWidth)?$marginWidth:0;
+  }
+
+  /**
+  * Sets the value of the margim_width of the page
+  * @param string $leftmargim
+  */
+  function SetLeftMargin($leftMargin = false)
+  {
+    $this->mBodyOptions["leftmargin"]  = ($leftMargin)?$leftMargin:0;
+  }
+
+  /**
+  * Sets the value of the margim_height of the page
+  * @param string $margimheight
+  */
+  function SetMarginHeight($marginHeight = false)
+  {
+    $this->mBodyOptions["marginheight"]  = ($marginHeight)?$marginHeight:0;
+  }
+
+  /**
+  * Sets the a background image for the page
+  * @param string $background A vallid image path
+  */
+  function SetBackground($background = false)
+  {
+    $this->mBodyOptions["background"] = $background;
+  }
+
+  /**
+  * Sets if the body tag may be used in the page. Pages with <frameset> tags may not have the <body> tag.
+  * @param boolean $bool
+  */
+  function SetHasBody($bool)
+  {
+    if (is_bool($bool))
+      $this->mHasBody = $bool;
+  }
+
+  /**
+  * Set options values in the body tag
+  * @param string $options
+  */
+  function SetBodyOptions($options)
+  {
+    $this->mBodyOptions = $options;
+  }
+  
+  /**
+  * Adds a master/detail object
+  * @param object $masterDetail A JMasterDetail object
+  */
+  function AddMasterDetail($masterDetail)
+  {
+    $this->mMasterDetail = $masterDetail;
+  }
+ 
+  /**
+  * Sets the page alignment
+  * @param string $options [ left | right | center ]
+  */
+  function SetAlign($align)
+  {
+    $this->mAlign = $align;
+  }
+
+  /**
+  * Sets if the total page's charge time must be shown or not
+  * @param boolean $show
+  */
+  function SetShowChargeTime($show = false)
+  {
+    if (is_bool($show))
+      $this->mShowChargeTime = $show;
+    else
+      $this->mShowChargeTime = false;
+  }
+
+
+  /**
+  * Returns a microtime tag as float
+  *
+  * Courtesy by www.php.net in http://br.php.net/manual/en/function.microtime.php
+  *
+  * @returns float
+  */
+  function GetMicroTime()
+  {
+    list($usec, $sec) = explode(" ",microtime());
+    return ((float)$usec + (float)$sec); 
+  }
+
+  /**
+  * Builds the page's output
+  * @returns string
+  */
+  function GetHtml()
+  {
+    $path = basename($_SERVER["PHP_SELF"]);
+    // Não vai tentar linkar ou validar a propria tela de permissoes
+    $isPopPermissoes = ($path == "pop_permissao_campo_grupo.php");
+    // Mostra o link apenas se houver permissao na funcao E nao for a propria tela de permissoes
+    if (function_exists("valida_permissao_funcao"))
+      $permissao_campo_grupo = (valida_permissao_funcao("permissao_campo_grupo") && !$isPopPermissoes);
+    
+    if ($permissao_campo_grupo)
+      $this->mPermissionFields = array();
+   
+    $out = "";
+    $out .= "<html>\n";
+    $out .= "<head>\n";
+		$out .= "<title>" . $this->mTitle . "</title>\n";
+		$out .= Erro::getInstance()->obterHtmlErrbit();
+    $out .= $this->GetMainContainerHtml();
+    $out .= "</head>\n";
+   
+    //Body Tag 
+    if ($this->mHasBody)
+    {
+      $out .= "<body ";
+
+      if (is_array($this->mBodyOptions))
+      {
+        reset($this->mBodyOptions);
+        for ($i = 0; $i < sizeof($this->mBodyOptions); $i++)
+        {
+          $out .= " ".key($this->mBodyOptions)."=\"".current($this->mBodyOptions)."\"";
+          next($this->mBodyOptions);
+        }
+      }
+
+      $out .= $this->mExtra;
+                                                      
+      $out .= ">\n";
+    }
+    
+    if ($this->CheckPendency($out))
+    {
+      if ($this->mHasBody) $out .= "</body>\n";
+      
+      $out .= "</html>\n";
+
+      return $out;
+    }
+    
+    require_once(JAGUAR_PATH . "jmaisacessados.php");
+    
+    if ($this->mSessionControl)
+    {
+      $out .= "<div style=\"display: none;\" id=\"reset_session\" class=\"reset_session\" title=\"Sua sessão irá expirar!\">
+                 <p>Você será desconectado em <span id=\"time_session\"></span> segundos.</p>
+               </div>
+               <div style=\"display: none;\" id=\"login\" title=\"<span style='color: red;'>Permissão Negada</span><br />Você não está logado no sistema!\">
+                 <iframe width=250 height=180 frameborder=\"no\" name=\"iframe\" src=\"\"></iframe>
+               </div>";
+    }
+
+    if ($this->mContainer->mType != "Window")
+      $out .= "<DIV id=\"tiplayer\" style=\"visibility:hidden;position:absolute;z-index:1000;top:-100;\"></DIV>";
+
+    if ($this->showBreadcrumbs)
+    {
+      $CaminhoMigalhas = new CaminhoMigalhas($this);
+      $out .= $CaminhoMigalhas->getHtml();
+    }
+    
+    $out .= "<" . $this->mAlign . ">\n";
+    
+    if (is_object($this->mMasterDetail))
+      $out .= $this->mMasterDetail->GetHtml();
+
+    //recursive loop through all elements
+    for ($i = 0; $i < $this->mIndex; $i++)
+    {
+      if (is_object($this->mObjects[$i]))
+      {
+        if (!$isPopPermissoes)
+            $this->aplicarPermissoes($this->mObjects[$i], $path);
+        
+        if (get_class($this->mObjects[$i]) == "JForm")
+        {
+          if ($permissao_campo_grupo)
+            $this->mPermissionFields = array_merge($this->mPermissionFields, $this->mObjects[$i]->mObjects);
+        }
+        else if (get_class($this->mObjects[$i]) == "JDBGrid")
+        {
+          if (isset($this->mObjects[$i]->mFilters))
+          {
+            if ($permissao_campo_grupo)
+            {
+              foreach($this->mObjects[$i]->mFilters as $key => $gridObj)
+              {
+                $obj = $gridObj["object"];
+                $obj->mLabel = $gridObj["description"];
+                $this->mPermissionFields[] = $obj;
+              }
+            }
+          }
+        }
+        
+        //tell this form that some fields might be disabled because the key can't be changed in case of delete or update
+        //maintenance doesn't necessarily have primary key fields
+        if ($this->mObjects[$i]->mType == "Form" &&
+            is_array($this->mKeys)               &&
+           ($this->mAction->mValue == "update" || $this->mAction->mValue == "delete"))
+        {
+          $arr = array();
+          foreach($this->mKeys as $dbName => $obj_reference)
+            $arr[$dbName] = $obj_reference->mName;
+        }
+
+        $this->mObjects[$i]->MakeId(++$this->mId);
+
+        if ($this->mObjects[$i]->mType == "Form")
+          $out .= $this->mObjects[$i]->GetHtml($arr);
+        else
+          $out .= $this->mObjects[$i]->GetHtml();
+
+        $this->mId = $this->mObjects[$i]->MakeId();//avoid duplicate ids when using nested objects
+      }
+      else
+        $out .= $this->mTexts[$i];
+    }
+
+    if ($this->mShowChargeTime)
+    {
+      $this->mChargeTime[] = $this->GetMicroTime();
+
+      $out .= "<br>Tempo total de carga da página: " . ($this->mChargeTime[1] - $this->mChargeTime[0]);
+    }
+    
+    $out .= "</" . $this->mAlign . ">\n";
+
+    if ($this->mHasBody)
+      $out .= "</body>\n";
+      
+    $out .= $this->GetMainContainerHtml("end");
+    
+    if (is_array($this->mPermissionFields) && count($this->mPermissionFields))
+    {
+      $link = "<center><br>
+                <A HREF=\"#\" onClick=\"window.open('pop_permissao_campo_grupo.php?f_nm_arquivo=$path')\">Permissões dos Campos</A>
+                <br><br><br>
+               </center>";
+      $_SESSION["s_campos_permissoes_$path"] = serialize($this->mPermissionFields);
+      
+      $out .= $link;
+    }
+     
+    $out .= "</html>\n";
+
+    return $out;
+  }
+  
+  function getFieldPermissions($nm_arquivo, $nm_campo=null)
+  {
+    return false;
+    
+    global $conn;
+    
+    try
+    {
+      $sql = "SELECT cd_grupo
+                FROM usuario_grupo
+               WHERE cd_pessoa = " . $_SESSION["s_cd_usuario"];
+      if (!$rs = $conn->Select($sql))
+        throw new Exception($conn->GetTextualError());
+      
+      $arrGrupos = $rs->GetArray(true);
+      
+      if (!is_array($arrGrupos) || !count($arrGrupos))
+        throw new Exception("Grupo do usuário não encontrado");
+      
+      foreach ($arrGrupos as $key => $value)
+        $wherein .= $value["cd_grupo"].",";
+      
+      $wherein = substr($wherein, 0, -1);
+        
+        if (isset($nm_campo))
+          $wherecampo = "AND nm_campo = $nm_campo";
+        
+        $sql = "SELECT nm_arquivo, nm_campo, id_permissao, vl_default 
+                  FROM permissao_campo_grupo 
+                 WHERE cd_grupo IN ($wherein)
+                   AND nm_arquivo = '$nm_arquivo'
+                   $wherecampo ";
+        if (!$rs = $conn->Select($sql))
+         throw new Exception($conn->GetTextualError());
+        
+        $arrPermissoes = $rs->GetArray(true);
+
+      return $arrPermissoes;
+    }
+    catch(Exception $e)
+    {
+      echo "Erro ao obter permissões dos campos: ".$e->GetMessage();
+      return false;
+    }
+  }
+  
+  public function aplicarPermissoes(&$obj, $nm_arquivo)
+  {
+    $objClass = get_class($obj);
+    
+    if ($objClass!="JForm" && $objClass!="JDBGrid")
+      return false;
+    
+    $arrPermissoes = $this->getFieldPermissions($nm_arquivo);
+    
+    if (!is_array($arrPermissoes) || !count($arrPermissoes))
+      return false;
+    
+    if ($objClass == "JForm")
+      return $this->aplicarPermissoesForm($obj, $nm_arquivo, $arrPermissoes);
+    else if ($objClass == "JDBGrid")
+      return $this->aplicarPermissoesGrid($obj, $nm_arquivo, $arrPermissoes);
+  }
+  
+  // Aplica permissoes para os filtros de um grid
+  function aplicarPermissoesGrid(JDBGrid &$grid, $nm_arquivo, $arrPermissoes)
+  {
+    if (empty($arrPermissoes))
+      return false;
+    
+    foreach ($arrPermissoes as $permissao)
+    {
+      foreach($grid->mFilters as $key => &$gridObj)
+      {
+        if ($permissao["nm_campo"] == $gridObj["object"]->mName)
+        {
+          $gridObj["object"]->mLabel = $gridObj["description"];
+          $gridObj["object"]->mType = $gridObj["type"];
+          $this->setFieldPermission($permissao["id_permissao"], $gridObj["object"]);
+          $this->setFieldDefault($permissao["vl_default"], $gridObj["object"]);
+        }
+      }
+    }
+  }
+  
+  // Aplica as configuracoes da tabela permissao_campo_grupo para todos os objs de um form
+  public function aplicarPermissoesForm(JForm &$form, $nm_arquivo, $arrPermissoes)
+  {
+    $action = $form->GetObjectByName("f_action");
+
+    // Evita alterar valores quando editando um registro existente
+    if (is_object($action) && strtolower($action->GetValue()) != "insert")
+      return false;
+    
+    if (empty($arrPermissoes))
+      return false;
+    
+    foreach ($arrPermissoes as $key => $permissao)
+    {
+      $objCampo = $form->GetObjectByName($permissao["nm_campo"]);
+      
+      if (!isset($objCampo) || !is_object($objCampo))
+        continue;
+      
+      $this->setFieldPermission($permissao["id_permissao"], $objCampo);
+      $this->setFieldDefault($permissao["vl_default"], $objCampo);
+    }
+  }
+  
+  public function setFieldDefault($valor, &$objCampo)
+  {
+    if (!isset($valor))
+      return false;
+    
+    $objClass = get_class($objCampo);    
+    // Adiciona ou subtrai dias do valor atual
+    if ($objClass == "JFormDate" || $objClass == "JFormTimeStamp")
+    {
+      $op = substr($valor, 0, 1);
+      
+      if (!in_array($op, array("+","-")))
+        return false;
+      
+      $valor = trim(str_replace($op, "", $valor));
+      (int)$valor *= 1;
+      
+      $dataOrig = $objCampo->GetValue(true);
+
+      // Caso não tenha um valor setado, usa data/hora atual
+      if (empty($dataOrig))
+        $timestampOrig = time();
+      else
+        $timestampOrig =  strtotime("$dataOrig");
+      
+      $timestampNovo = strtotime("$op$valor days", $timestampOrig);
+      $dataNova = date("Y-m-d", $timestampNovo);
+      
+      $objCampo->SetValue($dataNova);
+    }
+    else
+      $objCampo->SetValue($valor);
+  }
+  
+  public function setFieldPermission($permissao, &$objCampo)
+  {
+    $TIPO_DESABILITADO = 3;
+    $TIPO_HABILITADO   = 2;
+    $TIPO_OBRIGATORIO  = 1;
+    
+    switch ($permissao)
+    {
+      case $TIPO_OBRIGATORIO:
+        if (isset($objCampo->mLabel))
+        {
+          $label = $objCampo->mLabel;
+
+          if (!strpos($objCampo->mLabel, "</b>"))
+            $objCampo->mLabel = "<b>".$objCampo->mLabel."</b>";
+
+          $objCampo->SetTestIfEmpty(true, "Preencha o campo $label!");
+        }
+        else
+          $objCampo->SetTestIfEmpty(true, "Preencha o campo ".$objCampo->mName."!");
+      break;
+
+      case $TIPO_DESABILITADO:
+        $objCampo->SetDisabled(true);
+      break;
+
+      case $TIPO_HABILITADO:
+        $objCampo->SetDisabled(false);
+      break;
+    }
+  }
+
+  private function CheckPendency(&$out)
+  {
+    if (!$this->mConn->FieldExists("parametro_geral", "id_situacao_atua")) return;
+
+    $out .= "<div id=\"idBloqueio\"></div>\n";
+
+    $sql = "SELECT id_situacao_atua FROM parametro_geral";
+    
+    if (!$rs = $this->mConn->Select($sql))
+      exit("Erro SQL - Sem parâmetro para validação de pendência.");
+    
+    switch ($rs->GetField("id_situacao_atua"))
+    {
+      case 0:
+        if (basename($_SERVER["PHP_SELF"]) == "index.php" ||
+            basename($_SERVER["PHP_SELF"]) == "topo.php" ||
+            basename($_SERVER["PHP_SELF"]) == "login.php") return false;
+        
+        $out .= "
+          <script type=\"text/javascript\">
+            $(document).ready(function(){
+            
+              if (self != top)return;
+              
+              $('#idBloqueio').dialog({
+                title: 'Bloqueado',
+                width: 850,
+                height: 350,
+                modal: true,
+                autoOpen: true,
+                draggable: false,
+                resizable: false,
+                closeOnEscape: false,
+                open: function(){
+                  $(this).html('Prezado Cliente!<br /><br />Seu sistema está bloqueado entre em contato com o Administrador do Sistema.');
+                  $(this).prev().find('a').hide();
+                }
+              });
+            });
+          </script>";
+        
+        return true;
+      break;
+      case 1:
+        if (basename($_SERVER["PHP_SELF"]) != "sistema.php") return false;
+        
+        $out .= "
+          <script type=\"text/javascript\">
+            $(document).ready(function(){
+            
+              if (self != top)return;
+              
+              $('#idBloqueio').dialog({
+                title: 'Aviso de Bloqueio',
+                width: 850,
+                height: 350,
+                modal: true,
+                autoOpen: true,
+                draggable: false,
+                resizable: false,
+                open: function(){
+                  $(this).html('Prezado Cliente!<br /><br />' +
+                               'Identificamos que sua(s) fatura(s) não foram devidamente quitadas. ' +
+                               'Solicitamos que o(s) pagamento(s) seja(m) efetuado(s) no prazo máximo de 24 horas.<br />' +
+                               'Destacamos que os serviços serão bloqueados após o prazo acima estipulado.<br />' +
+                               'Caso já tenha quitado a(s) fatura(s) a que se refere o presente aviso, favor encaminhar os comprovantes.<br /><br />' +
+                               'Dúvidas entrar em contato com <a href=\"mailto:financeiro@atua.com.br\">financeiro@atua.com.br</a>.');
+                }
+              });
+            });
+          </script>";
+      default: return false; break;
+    }
+  }
+}

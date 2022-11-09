@@ -1,0 +1,69 @@
+/.cvsignore/1.1/Thu Aug 23 16:29:35 2018//
+/AjaxIframe.php/1.1/Thu Aug 23 16:29:35 2018//
+/Autoload.php/1.1/Thu Aug 23 16:29:35 2018//
+/Aviso.class.php/1.1/Thu Aug 23 16:29:35 2018//
+/CaminhoMigalhas.class.php/1.1/Thu Aug 23 16:29:35 2018//
+/Erro.class.php/1.2/Mon Aug 27 14:43:17 2018//
+/IXR_Library.inc.php/1.1/Thu Aug 23 16:29:35 2018//
+/JFormAutoComplete.php/1.2/Mon Aug 27 14:39:12 2018//
+/JFormDate.php/1.2/Tue Dec  7 17:03:13 2021//
+/JFormList.class.php/1.1/Thu Aug 23 16:29:35 2018//
+/JFormTime.php/1.2/Tue Dec  7 17:05:15 2021//
+/JFormUpload.php/1.1/Thu Aug 23 16:29:35 2018//
+/JGridAngular.php/1.2/Tue Dec  7 17:06:15 2021//
+/JLog.php/1.2/Tue Dec  7 17:07:49 2021//
+/JMenu.php/1.2/Tue Dec  7 17:09:13 2021//
+/JMenuNode.php/1.2/Tue Dec  7 17:10:34 2021//
+/JPrimitiveObject.php/1.1/Thu Aug 23 16:29:35 2018//
+/JWindow.php/1.2/Tue Dec  7 17:12:07 2021//
+/ManBD.class.php/1.2/Mon Mar 25 14:00:33 2019//
+/Notifications.class.php/1.1/Thu Aug 23 16:29:35 2018//
+/NotificationsInterface.php/1.1/Thu Aug 23 16:29:35 2018//
+/PdfMerger.class.php/1.1/Thu Aug 23 16:29:35 2018//
+/README.md/1.1/Thu Aug 23 16:29:35 2018//
+/Sajax.php/1.1/Thu Aug 23 16:29:35 2018//
+/SoapClientSSL.class.php/1.2/Tue Dec  7 17:13:01 2021//
+/UploadFile.php/1.1/Thu Aug 23 16:29:35 2018//
+/composer.json/1.3/Fri Nov 27 13:26:26 2020//
+/conf.inc.php/1.3/Tue Sep 06 16:42:00 2022//
+/conf_ibase.inc.php/1.1/Thu Aug 23 16:29:35 2018//
+/conf_mysql.inc.php/1.1/Thu Aug 23 16:29:35 2018//
+/conf_pgsql.inc.php/1.1/Thu Aug 23 16:29:35 2018//
+/diferenca/1.1/Thu Aug 23 16:29:35 2018//
+/jaguar.inc.php/1.1/Thu Aug 23 16:29:35 2018//
+/jaguar_coletor.inc.php/1.1/Thu Aug 23 16:29:35 2018//
+/jbaseconsultation.inc.php/1.1/Thu Aug 23 16:29:35 2018//
+/jconsultation.inc.php/1.3/Tue Dec  7 17:14:44 2021//
+/jcrosstabconsultation.inc.php/1.2/Tue Dec  7 17:16:26 2021//
+/jdb.inc.php/1.4/Tue Dec  7 17:18:41 2021//
+/jdbgrid.inc.php/1.5/Tue Sep 13 16:23:22 2022//
+/jform.inc.php/1.7/Tue Dec 07 17:47:18 2021//
+/jhierarchicalconsultation.inc.php/1.2/Tue Dec  7 17:23:13 2021//
+/jhtml.inc.php/1.4/Tue Apr 05 12:38:59 2022//
+/jmaintenance.inc.php/1.3/Tue Dec  7 17:26:57 2021//
+/jmaisacessados.php/1.1/Thu Aug 23 16:29:35 2018//
+/jmasterdetail.inc.php/1.3/Tue Dec  7 17:28:13 2021//
+/jmenu.inc.php/1.2/Tue Dec  7 17:30:16 2021//
+/jobject.inc.php/1.4/Tue Apr 05 13:04:20 2022//
+/jpoplist.inc.php/1.3/Tue Dec 14 13:23:59 2021//
+/jsubconsultation.inc.php/1.2/Tue Dec  7 17:33:52 2021//
+/jsumconsultation.inc.php/1.2/Tue Dec  7 17:42:15 2021//
+/jtable.inc.php/1.2/Tue Dec 07 17:41:02 2021//
+/jtree.inc.php/1.3/Tue Dec  7 17:39:28 2021//
+/jutils.inc.php/1.2/Tue Sep 15 16:42:45 2020//
+/lgpl.txt/1.1/Thu Aug 23 16:29:35 2018//
+/log_rpc.php/1.1/Thu Aug 23 16:29:35 2018//
+/start.php/1.1/Thu Aug 23 16:29:35 2018//
+/style.css/1.2/Mon Mar 25 20:36:54 2019//
+D/bootstrap////
+D/dev////
+D/fontAwesome////
+D/img////
+D/jaguar-ui////
+D/jdbdrivers////
+D/jformeditor////
+D/jquery////
+D/js////
+D/jtree////
+D/momentjs////
+/jdbauth.inc.php/1.5/Tue Apr 05 13:38:26 2022//

@@ -1,0 +1,23 @@
+Treinamento^2022-11-08 08:53:51^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES ('2', '54999883058', '0', '4') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 08:54:53^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES ('2', '54999883058', '0', '5') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 08:54:57^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES ('2', '54999883058', '0', '6') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 08:56:10^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES ('2', '54999883058', '1', '7') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:02:13^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES ('2', '54999883058', '1', '8') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:05:16^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, cd_telefone) VALUES ('2', '54999883058', '1', '9') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:09:57^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('2', '54999883058', '3', '1', '10') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:22:06^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('2', '5489784515', '3', '1', '11') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:22:34^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('5', '4984984894', '3', '1', '12') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:22:44^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('5', '8948948948', '2', '0', '13') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:23:17^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('6', '54948415630', '3', '1', '14') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:23:34^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('3', '54948516523', '3', '1', '15') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:23:55^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('4', 'texugovdd@gmail.com', '1', '10') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:24:06^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('4', '54949412316', '3', '1', '16') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:57:50^INSERT INTO endereco () VALUES (NULL) ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-08 09:57:54^INSERT INTO endereco () VALUES (NULL) ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-08 13:52:24^INSERT INTO endereco () VALUES (NULL) ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-08 13:55:13^INSERT INTO endereco (cd_pessoa, id_tipo, cd_cidade, nm_bairro, nm_logradouro, nr_endereco, ds_complemento, cd_endereco) VALUES (NULL, '1', '1', 'PETROPOLIS', 'DOUTOR BOZANO', '580', 'BLOCO E', '1') ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-08 13:55:42^INSERT INTO endereco (cd_pessoa, id_tipo, cd_cidade, nm_bairro, nm_logradouro, nr_endereco, ds_complemento, cd_endereco) VALUES ('3', '4', '1', 'PETROPOLIS', 'DOUTOR BOZANO', '580', 'BLOCO E', '2') ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-08 14:10:57^INSERT INTO endereco (id_tipo, cd_cidade, nm_bairro, nm_logradouro, nr_endereco, ds_complemento, cd_endereco) VALUES ('1', '13', 'CARLOTA', 'LUIS SOUZA', '809', 'CASA', '3') ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-08 14:11:08^INSERT INTO endereco (cd_pessoa, id_tipo, cd_cidade, nm_bairro, nm_logradouro, nr_endereco, ds_complemento, cd_endereco) VALUES (NULL, '1', '13', 'CARLOTA', 'LUIS SOUZA', '809', 'CASA', '4') ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-08 14:11:11^INSERT INTO endereco (cd_pessoa, id_tipo, cd_cidade, nm_bairro, nm_logradouro, nr_endereco, ds_complemento, cd_endereco) VALUES (NULL, '1', '13', 'CARLOTA', 'LUIS SOUZA', '809', 'CASA', '5') ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-08 14:12:06^INSERT INTO endereco (cd_pessoa, id_tipo, cd_cidade, nm_bairro, nm_logradouro, nr_endereco, ds_complemento, cd_endereco) VALUES ('5', '1', '13', 'CARLOTA', 'LUIS SOUZA', '809', 'CASA', '6') ^0^man_endereco.php^treinamento_jaguar 

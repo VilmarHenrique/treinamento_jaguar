@@ -1,0 +1,10 @@
+Treinamento^2022-10-06 14:25:51^UPDATE pais SET nm_pais = 'TESTES' WHERE cd_pais = '2' ^1^man_pais.php^treinamento_jaguar 
+Treinamento^2022-10-06 14:25:56^UPDATE pais SET nm_pais = 'TESTESASDASDASA' WHERE cd_pais = '2' ^1^man_pais.php^treinamento_jaguar 
+Treinamento^2022-10-06 14:26:01^UPDATE pais SET nm_pais = 'EUA' WHERE cd_pais = '3' ^1^man_pais.php^treinamento_jaguar 
+Treinamento^2022-10-06 14:49:47^INSERT INTO regiao (nm_regiao, cd_regiao) VALUES ('NORTE', '1') ^0^man_regiao.php^treinamento_jaguar 
+Treinamento^2022-10-06 14:49:58^UPDATE regiao SET nm_regiao = 'NORTES' WHERE cd_regiao = '1' ^1^man_regiao.php^treinamento_jaguar 
+Treinamento^2022-10-06 14:50:03^UPDATE regiao SET nm_regiao = 'NORTE' WHERE cd_regiao = '1' ^1^man_regiao.php^treinamento_jaguar 
+Treinamento^2022-10-06 15:29:00^INSERT INTO cidade_regiao (cd_cidade) VALUES ('1') ^0^man_regiao_cidade.php^treinamento_jaguar 
+Treinamento^2022-10-06 15:29:27^INSERT INTO cidade_regiao (cd_regiao, cd_cidade) VALUES ('1', '1') ^0^man_regiao_cidade.php^treinamento_jaguar 
+Treinamento^2022-10-06 15:30:40^DELETE FROM cidade_regiao WHERE cd_regiao = '1' AND cd_cidade = '1' ^2^man_regiao_cidade.php^treinamento_jaguar 
+Treinamento^2022-10-06 15:33:21^INSERT INTO cidade_regiao (cd_regiao, cd_cidade) VALUES ('1', '1') ^0^man_regiao_cidade.php^treinamento_jaguar 

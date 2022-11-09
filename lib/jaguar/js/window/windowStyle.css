@@ -1,0 +1,72 @@
+/******************************
+
+CSS designed by
+Rogério Alencar Lino Filho
+rogeriolino@gmail.com
+
+******************************/
+
+#window {
+	top: 100px;
+	left: 300px;
+	position: absolute;
+	border-top: 1px solid #000000;
+	border-right: 2px solid #666666;
+	border-bottom: 2px solid #000000;
+	border-left: 1px solid #999999;
+	z-index: 1000;
+}
+
+#bar {
+	width: 100%;
+	height: 25px;
+	background: #666666;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid black;
+	border-left: 1px solid #999999;
+}
+
+#bar h2 {
+	font: 12px Verdana, Arial, Sans-serif;
+	color: #ffffff;
+	padding: 5px 20px;
+	margin: 0px;
+	float: left;
+}
+
+#bar a {
+	font: 12px Verdana, Arial, Sans-serif;
+	color: #ffffff;
+	padding: 1px 4px;
+	margin: 4px 2px 0px 1px;
+	background: #333333;
+	text-decoration: none;
+	display: block;
+	border: 1px solid #000000;
+	float: right;
+}
+
+#content {
+	padding: 10px 20px;
+	background: #f1f1f1;
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#content p {
+	font: 12px Verdana, Arial, Sans-serif;
+	color: #333333;
+	margin-bottom: 5px;
+	text-align: justify;
+}
+
+#statusbar {
+	font: 10px Verdana, Arial, Sans-serif;
+	color: #999999;
+	padding: 1px 5px;
+	background: #d9d9d9;
+	border-top: 1px solid #666666;
+	text-align: right;
+}
+

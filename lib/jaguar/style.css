@@ -1,0 +1,271 @@
+tt {
+    font-size: 9pt;
+}
+
+th {
+    border-bottom: 1px #DADAFF solid;
+    border-right: 1px #E4E4FF solid;
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 11px;
+    color: #000077;
+    font-weight: 300;
+    background-color: green;
+    padding: 2px;
+    text-align: center;
+}
+
+th.header {
+    cursor: pointer;
+}
+
+td {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 8pt;
+    padding: 2px 2px;
+}
+
+table {
+    border-radius: 2px;
+    border: 1px solid #CECEFF;
+    padding: 2px;
+    border-collapse: separate;
+}
+
+.table-grid-td {
+    padding: 0px 2px;
+    border-right: #f5f8f9 solid 1px;
+}
+
+tr.rowodd {
+    background-color: #F0F0F0
+}
+
+tr.roweven {
+    background-color: #E0E0E0
+}
+
+tr.rowodd td {
+    height: 23px;
+}
+
+tr.roweven td {
+    height: 23px;
+}
+
+tr.rowodd_filter {
+    background-color: #DDEAFF
+}
+
+tr.roweven_filter {
+    background-color: #BFD8FF
+}
+
+tr.rowodd_filter td, tr.roweven_filter td{
+  border-left: 1px solid #fff;
+}
+
+
+tr.rowodd-hi {
+    background-color: #e7f3ff
+}
+
+tr.roweven-hi {
+    background-color: #e7f3ff
+}
+
+tr.rowodd-hi td {
+    height: 23px;
+}
+
+tr.roweven-hi td {
+    height: 23px;
+}
+
+label {
+  margin-right: 10px;
+  margin-left: 1px;
+  margin-bottom: 3px;
+}
+
+label>input[type=radio] {
+  margin-right: 2px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    color: #000077;
+    font-size: 16px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    color: #000077;
+    font-size: 15px;
+}
+
+h3 {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    color: #000077;
+    font-size: 14px;
+}
+
+h4 {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    color: #000077;
+    font-size: 13px;
+}
+
+h5 {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    color: #000077;
+    font-size: 12px;
+}
+
+A:link {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 8pt;
+    text-decoration: none;
+    color: #0000FF
+}
+
+A:visited {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 8pt;
+    text-decoration: none;
+    color: #0000FF
+}
+
+A:hover {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 8pt;
+    text-decoration: underline;
+    color: #FF0000
+}
+
+A.white:link {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 9pt;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+A.white:visited {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 9pt;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+A.white:hover {
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 9pt;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+a {
+    cursor: pointer;
+    color: #0000ff;
+}
+
+a:hover {
+    color: #dd0000;
+    text-decoration: underline;
+}
+
+.table-md {
+    box-shadow: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #E0E0E0;
+}
+
+.table-md td {
+    margin: 0;
+    padding: 0px;
+    border: 0;
+    box-shadow: none;
+}
+
+.table-md td a:hover {
+    text-decoration: none;
+}
+
+.btn-sm-jaguar {
+    margin: 0px;
+    padding: 5px 10px;
+    color: #555;
+    font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    width: 100%;
+}
+.btn-sm-jaguar:hover {
+  border: 0px;
+  padding: 6px 11px;
+}
+
+input[type='checkbox'] {
+    cursor: pointer;
+}
+
+input[type='text'], input[type='password'], textarea, select {
+    background-color: #eee;
+    border          : 1px #aeaeae solid;
+    border-radius: 3px;
+}
+
+input[type='text']:focus, input[type='password']:focus, textarea:focus, select:focus,
+input[type='text']:hover, input[type='password']:hover, textarea:hover, select:hover {
+    background-color: #fff;
+    border          : 1px #aaa solid;
+    box-shadow      : #ccc 1px 1px 0px;
+}
+
+input[type='submit'], input[type='button'], input[type='reset'] {
+  font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  padding: 3px 6px;
+  background-image: linear-gradient(to bottom, #FFFFFF 0px, #E0E0E0 100%);
+  background-repeat: repeat-x;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+  border: 1px solid #888;
+  border-radius: 4px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+input[type='submit']:hover, input[type='button']:hover, input[type='reset']:hover {
+  background-image: none;
+  color: #333;
+  border-color: #adadad;
+  background-color: #e0e0e0;
+}
+
+select[name$="_origin[]"], select[name$="_destination[]"] {
+  min-width: 250px;
+  max-width: 400px;
+}
+
+a .glyphicon {
+    color: #888888;
+    font-size: 16px;
+}
+
+a .glyphicon:hover {
+    color: #0000ff;
+}
+
+.ui-tooltip {
+    font-size: 12px;
+}
+
+.erro-input{
+  border: solid 2px #a94442 !important
+}
