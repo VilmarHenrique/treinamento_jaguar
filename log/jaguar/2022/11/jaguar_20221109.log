@@ -4,3 +4,4 @@ Treinamento^2022-11-09 10:00:52^DELETE FROM pessoa WHERE cd_pessoa = '8' ^2^man_
 Treinamento^2022-11-09 11:13:51^INSERT INTO pessoa (nm_pessoa, dt_nascimento, cd_pessoa) VALUES ('LULONARO', '2022-10-30', '9') ^0^man_pessoa.php^treinamento_jaguar 
 Treinamento^2022-11-09 11:14:14^INSERT INTO pessoa (nm_pessoa, dt_nascimento, cd_pessoa) VALUES ('LUCAS SILVA', '2000-01-01', '10') ^0^man_pessoa.php^treinamento_jaguar 
 Treinamento^2022-11-09 11:32:06^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('5', 'vilmar@gmail.com', '1', '11') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-09 13:58:48^INSERT INTO produto (nm_produto, id_ativo, cd_produto) VALUES ('VINHO TINTO', '1', '1') ^0^man_produto.php^treinamento_jaguar 
