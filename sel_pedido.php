@@ -37,8 +37,9 @@
   $grid_pedido->SetColumnAlign("dt_pedido", "center");
   $grid_pedido->SetColumnAlign("vl_pedido", "right");
   
-  //Get_index_of
+  //CallBack
   $grid_pedido->SetCallback(get_index_of($visible_fields, "dt_pedido"), "Format_Date", ["sys", "pt_BR"]);
+  $grid_pedido->SetCallback(get_index_of($visible_fields, "vl_pedido"),    "Format_Number", [2, "sys", "pt_BR"]);
 
   //ExtraFields
   $grid_pedido->AddExtraFields([" "  => "Propriedades"]);
