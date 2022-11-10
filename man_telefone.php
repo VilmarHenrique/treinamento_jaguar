@@ -74,7 +74,7 @@
   
   //Sql
   $sql = [];
-  $sql["fields"] = "cd_pessoa, nr_telefone, id_principal, id_tipo";
+  $sql["fields"] = "cd_pessoa, cd_telefone, nr_telefone, id_principal, id_tipo";
   $sql["from"]   = "telefone";
   $sql["order"]  = "id_principal DESC";
   $sql["where"]  = "cd_pessoa = '{$f_cd_pessoa}' ";

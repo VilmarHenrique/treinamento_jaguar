@@ -10,14 +10,15 @@
   
   //Html
   $man = new JMaintenance($conn, "Manutenção de Preço");
-  $man->SetDBTable("pedido_preco");
+  $man->SetDBTable("produto_preco");
+  $man->SetInsertKeys(true);
   $man->AddMasterDetail($master);
   
   //SetLocation
   $key = array("f_cd_produto" => $f_cd_produto);
-  $man->SetLocation("insert", "man_produto.php", $key);
-  $man->SetLocation("delete", "man_produto.php", $key);
-  $man->SetLocation("update", "man_produto.php", $key);
+  $man->SetLocation("insert", "man_produto_preco.php", $key);
+  $man->SetLocation("delete", "man_produto_preco.php", $key);
+  $man->SetLocation("update", "man_produto_preco.php", $key);
   
   //Cabeçalho
   if (strlen($f_cd_produto))
@@ -36,26 +37,23 @@
     else
       conn_mostra_erro();
   }
+    //Fields
 
-    //cd_pedido_produto
-    $cd_pedido_produto = new JFormHidden("f_cd_pedido_produto");
-    $man->AddDBField("cd_pedido_produto", $cd_pedido_produto, false, true);
+    //cd_produto
+    $cd_produto = new JFormHidden("f_cd_produto");
+    $man->AddDBField("cd_produto", $cd_produto, false, true);
 
-    //cd_pedido
-    $cd_pedido = new JFormHidden("f_cd_pedido");
-    $man->AddDBField("cd_pedido", $cd_pedido, false);
-
-    //dt_pediddo
+    //dt_vigencia
     $label = "Dt.Vigência";
-    $dt_pediddo = new JFormDate("f_dt_pedido"); 
-    $dt_pediddo->SetTestIfEmpty(true,"Preencha o campo {$label}!");
-    $man->AddDBField("dt_pediddo", $dt_pediddo, "<b>{$label}</b>");
+    $dt_vigencia = new JFormDate("f_dt_vigencia"); 
+    $dt_vigencia->SetTestIfEmpty(true,"Preencha o campo {$label}!");
+    $man->AddDBField("dt_vigencia", $dt_vigencia, "<b>{$label}</b>",true);
 
-    //vl_produto
+    //vl_preco
     $label = "Valor";
-    $vl_produto = new JFormDate("f_vl_produto"); 
-    $vl_produto->SetTestIfEmpty(true,"Preencha o campo {$label}!");
-    $man->AddDBField("vl_produto", $vl_produto, "<b>{$label}</b>");
+    $vl_preco = new JFormFormatedNumber("f_vl_preco"); 
+    $vl_preco->SetTestIfEmpty(true,"Preencha o campo {$label}!");
+    $man->AddDBField("vl_preco", $vl_preco, "<b>{$label}</b>");
 
     //man End
     $man->BuildEndMaintenance();
@@ -64,40 +62,40 @@
 
     //Sql
     $sql = [];
-    $sql["fields"] = "p.dt_pedido, pp.vl_produto";
-    $sql["from"]   = "pedido_produto pp 
-                      JOIN pedido p ON pp.cd_pedido = p.cd_pedido";
-    $sql["order"]  = "pp.cd_pedido_produto ";
+    $sql["fields"] = "cd_produto, dt_vigencia,
+                      TO_CHAR(dt_vigencia, 'DD/MM/YYYY') AS dt_vigencia_fmt,
+                      vl_preco";
+    $sql["from"]   = "produto_preco pp ";
+    $sql["order"]  = "cd_produto";
     $sql["where"]  = "cd_produto = '{$f_cd_produto}' ";
 
-
     //Grid
-    $grid_preco = new JDBGrid("pedido_preco_{$f_cd_pedido_preco}", $conn, $sql);
+    $grid_produto_preco = new JDBGrid("produto_{$f_cd_produto}", $conn, $sql);
 
     $visible_fields = [
-      "dt_pedido"       => "Dt. Vigência",
-      "vl_produto"      => "Valor",
+      "dt_vigencia"   => "Dt. Vigência",
+      "vl_preco"      => "Valor",
     ];
     
     $nr_fields = sizeof($visible_fields);
     
-    $grid_preco->SetVisibleFields($visible_fields);
+    $grid_produto_preco->SetVisibleFields($visible_fields);
     
-
     //ColumnAlign
-    $grid_preco->SetColumnAlign("dt_pedido",  "center");
-    $grid_preco->SetColumnAlign("vl_produto",   "right");
+    $grid_produto_preco->SetColumnAlign("dt_vigencia", "center");
+    $grid_produto_preco->SetColumnAlign("vl_preco",   "right");
 
     //Callback
-    $grid_preco->SetCallback(get_index_of($visible_fields, "dt_pedido"), "Formate_Date");
-
+    $grid_produto_preco->SetCallback(get_index_of($visible_fields, "dt_vigencia"), "Format_Date",   ["sys", "pt_BR"]);
+    $grid_produto_preco->SetCallback(get_index_of($visible_fields, "vl_preco"),    "Format_Number", [2, "sys", "pt_BR"]);
+    
     //Propriedades
-    $grid_preco->AddExtraFields(array(" " => "Propriedades"));
-    $grid_preco->SetLink($nr_fields, "man_produto.php");
-    $grid_preco->SetLinkFields($nr_fields, ["f_cd_pedido_preco"  => "cd_pedido_preco",
-                                            "f_cd_pedido_preco" => "cd_pedido_preco"]);
+    $grid_produto_preco->AddExtraFields(array(" " => "Propriedades"));
+    $grid_produto_preco->SetLink($nr_fields, "man_produto_preco.php");
+    $grid_produto_preco->SetLinkFields($nr_fields, ["f_cd_produto"  => "cd_produto",
+                                            "f_dt_vigencia" => "dt_vigencia_fmt"]);
 
-    $man->AddObject($grid_preco);
+    $man->AddObject($grid_produto_preco);
   
     $man->AddHtml("<br><a href=\"sel_produto.php\">Listagem de Produto</a>");
     

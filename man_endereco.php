@@ -103,7 +103,7 @@
 
     //Sql
     $sql = [];
-    $sql["fields"] = "u.ds_sigla, c.nm_cidade, e.nm_bairro, e.nm_logradouro, e.nr_endereco, e.id_tipo";
+    $sql["fields"] = "e.cd_endereco, e.cd_pessoa, u.ds_sigla, c.nm_cidade, e.nm_bairro, e.nm_logradouro, e.nr_endereco, e.id_tipo";
     $sql["from"]   = "endereco e
                       JOIN cidade c ON c.cd_cidade = e.cd_cidade
                       JOIN uf u ON u.cd_uf = c.cd_uf";
