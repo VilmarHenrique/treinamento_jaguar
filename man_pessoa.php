@@ -1,6 +1,7 @@
 <?php
   session_start();
   require_once("lib/jaguar/jaguar.inc.php");
+  
  
   $s_md_cd_pessoa = $f_cd_pessoa;
   include("md_pessoa.php");
