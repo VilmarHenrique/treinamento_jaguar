@@ -14,3 +14,23 @@ Treinamento^2022-11-11 10:13:28^INSERT INTO pedido_produto (cd_pedido, cd_produt
 Treinamento^2022-11-11 10:18:09^INSERT INTO pedido_produto (cd_pedido, cd_produto, qt_produto, vl_produto, vl_desconto, vl_total, cd_pedido_produto) VALUES ('15', '3', '1', '10.00', '2.00', '8.00', '20') ^0^man_pedido_produto.php^treinamento_jaguar 
 Treinamento^2022-11-11 10:23:15^INSERT INTO pedido_produto (cd_pedido, cd_produto, qt_produto, vl_produto, vl_desconto, vl_total, cd_pedido_produto) VALUES ('15', '3', '1', '10.00', '2.00', '8.00', '21') ^0^man_pedido_produto.php^treinamento_jaguar 
 Treinamento^2022-11-11 10:27:13^UPDATE pedido_produto SET cd_pedido = '15', cd_produto = '3', qt_produto = '1', vl_produto = '5.00', vl_desconto = '2.00', vl_total = '3.00' WHERE cd_pedido_produto = '21' ^1^man_pedido_produto.php^treinamento_jaguar 
+Treinamento^2022-11-11 10:32:20^UPDATE pedido_produto SET cd_pedido = '15', cd_produto = '3', qt_produto = '2', vl_produto = '10.00', vl_desconto = '2.00', vl_total = '8.00' WHERE cd_pedido_produto = '20' ^1^man_pedido_produto.php^treinamento_jaguar 
+Treinamento^2022-11-11 10:32:27^UPDATE pedido_produto SET cd_pedido = '15', cd_produto = '3', qt_produto = '2', vl_produto = '5.00', vl_desconto = '2.00', vl_total = '3.00' WHERE cd_pedido_produto = '21' ^1^man_pedido_produto.php^treinamento_jaguar 
+Treinamento^2022-11-11 10:32:35^DELETE FROM pedido_produto WHERE cd_pedido_produto = '20' ^2^man_pedido_produto.php^treinamento_jaguar 
+Treinamento^2022-11-11 10:32:42^DELETE FROM pedido_produto WHERE cd_pedido_produto = '21' ^2^man_pedido_produto.php^treinamento_jaguar 
+Treinamento^2022-11-11 10:33:10^DELETE FROM produto_preco WHERE cd_produto = '1' AND dt_vigencia = '2022-11-15' ^2^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 10:33:22^INSERT INTO produto_preco (vl_preco, cd_produto, dt_vigencia) VALUES ('19.90', '1', '2022-01-01') ^0^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 10:33:32^INSERT INTO produto_preco (vl_preco, cd_produto, dt_vigencia) VALUES ('22.90', '1', '2022-06-01') ^0^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 10:33:42^INSERT INTO produto_preco (vl_preco, cd_produto, dt_vigencia) VALUES ('24.90', '1', '2022-10-01') ^0^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:12:56^DELETE FROM produto_preco WHERE cd_produto = '3' AND dt_vigencia = '2023-01-01' ^2^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:13:00^DELETE FROM produto_preco WHERE cd_produto = '3' AND dt_vigencia = '2022-11-01' ^2^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:13:07^INSERT INTO produto_preco (vl_preco, cd_produto, dt_vigencia) VALUES ('3.99', '3', '2022-01-01') ^0^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:18:26^INSERT INTO produto_preco (vl_preco, cd_produto, dt_vigencia) VALUES ('25.90', '1', '2022-12-01') ^0^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:18:51^INSERT INTO produto_preco (vl_preco, cd_produto, dt_vigencia) VALUES ('0.01', '1', '2022-11-10') ^0^man_produto_preco.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:20:59^INSERT INTO pessoa (nm_pessoa, dt_nascimento, cd_pessoa) VALUES ('MATHEUS LUTZ', '1987-08-07', '11') ^0^man_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:21:16^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('11', 'matheus@gmail.com', '1', '12') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:21:27^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('11', 'matheus.lutz@veplex.com.br', '0', '13') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:21:49^INSERT INTO endereco (cd_pessoa, id_tipo, cd_cidade, nm_bairro, nm_logradouro, nr_endereco, ds_complemento, cd_endereco) VALUES ('11', '1', '1', 'SANTA MARTA', 'RUA DOS BOBOS', '0', NULL, '7') ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:22:14^INSERT INTO endereco (cd_pessoa, id_tipo, cd_cidade, nm_bairro, nm_logradouro, nr_endereco, ds_complemento, cd_endereco) VALUES ('11', '2', '1', 'CENTRO', 'ANTONIO ARAUJO', '1046', 'PRIME OFFICE', '8') ^0^man_endereco.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:22:29^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('11', '54999999999', '3', '1', '17') ^0^man_telefone.php^treinamento_jaguar 
+Treinamento^2022-11-11 11:22:40^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal, cd_telefone) VALUES ('11', '5433333333', '2', '0', '18') ^0^man_telefone.php^treinamento_jaguar 

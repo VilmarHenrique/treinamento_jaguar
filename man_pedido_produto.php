@@ -126,6 +126,7 @@
     $grid_pedido_produto->SetColumnAlign("vl_produto",  "right");
     $grid_pedido_produto->SetColumnAlign("vl_total",    "right");
     $grid_pedido_produto->SetColumnAlign("vl_desconto", "right");
+    $grid_pedido_produto->SetColumnAlign("qt_produto",  "right");
 
     //Callback
     $grid_pedido_produto->SetCallback(get_index_of($visible_fields, "vl_total"),    "Format_Number", [2, "sys", "pt_BR"]);

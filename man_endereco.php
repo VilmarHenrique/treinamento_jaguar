@@ -94,7 +94,7 @@
     //ds_complemento
     $label = "Complemento";
     $ds_complemento = new JFormText("f_ds_complemento");
-    $man->AddDBField("ds_complemento", $ds_complemento, "<b>{$label}</b>");
+    $man->AddDBField("ds_complemento", $ds_complemento, "{$label}");
     
     //man End
     $man->BuildEndMaintenance();
