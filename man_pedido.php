@@ -4,7 +4,7 @@
   require_once("include/funcoes.inc.php");
 
   $s_md_cd_produto = $f_cd_produto;
-  include("md_produto.php");
+  include("md_pedido.php");
 
   //Html
   $man = new JMaintenance($conn, "Manutenção de Pedido");

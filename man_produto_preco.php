@@ -3,7 +3,7 @@
   require_once("lib/jaguar/jaguar.inc.php");
   require_once("include/funcoes.inc.php");
   
-  $s_md_cd_pessoa = $f_cd_pessoa;
+  $s_md_cd_produto = $f_cd_produto;
    include("md_produto.php");
    
   $conn->SetDebug(0);
