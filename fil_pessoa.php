@@ -7,14 +7,35 @@
   $title = "Relatório de Pessoa";
   $html = new JHtml($title);
   $html->AddHtml("<h3>$title</h3>");
-
+ 
   $conn->SetDebug(0);
 
   //Form
   $form = new JForm();
 
+  //cd_cidade
+  $label = "Cidade";
+  $form->OpenRow();
+  $form->OpenHeader("<b>{$label}</b>");
+  $form->OpenCell();
+  $cd_cidade = new JFormDualList("f_cd_cidade");
+   
+  $sql = <<<SQL
+   SELECT c.cd_cidade AS value,
+		      c.nm_cidade ||' / ' || u.ds_sigla AS description 
+      FROM cidade c  
+      JOIN uf u on c.cd_uf = u.cd_uf 
+      ORDER BY c.cd_cidade 
+SQL;
+ 
+  if ($rs = $conn->Select($sql))
+  $cd_cidade->SetOptions($rs->GetArray(true));
+  else
+  conn_mostra_erro();
 
-  
+  $form->AddObject($cd_cidade);
+
+
   //id_formato
   $label = "Formato";
   $form->OpenRow();
@@ -25,6 +46,7 @@
   $id_formato->SetTestIfEmpty(true, "Preencha o campo $label!");
   $id_formato->SetOptions($op_id_formato);
   $form->AddObject($id_formato);
+
 
   $form->OpenRow();
   $form->OpenHeader("", ["colspan" => 2]);
