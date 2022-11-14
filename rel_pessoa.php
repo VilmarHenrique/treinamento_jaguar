@@ -36,7 +36,8 @@
                                                 ORDER BY em2.id_principal  DESC
                                                 LIMIT 1)
       WHERE TRUE " . 
-      restricao_where("AND", "c.cd_cidade", "IN", $cd_cidade, "", true);
+      restricao_where("AND", "c.cd_cidade", "IN", $cd_cidade, "", true).
+      restricao_where("AND", "e.nm_bairro", "~*", $f_nm_bairro, "'"); 
   
   switch ($f_id_formato)
   {

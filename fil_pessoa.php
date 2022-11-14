@@ -32,12 +32,21 @@
 SQL;
  
   if ($rs = $conn->Select($sql))
-  $cd_cidade->SetOptions($rs->GetArray(true ));
+  $cd_cidade->SetOptions($rs->GetArray(true));
   else
   conn_mostra_erro();
 
   $form->AddObject($cd_cidade);
 
+//Bairro
+  $label = "Bairro";
+  $form->OpenRow();
+  $form->OpenHeader("<b>{$label}</b>");
+  $form->OpenCell();
+  $nm_bairro = new JFormText("f_nm_bairro");
+  $nm_bairro->SetTestIfEmpty(true, "Preencha o campo $label!");
+  $form->AddObject($nm_bairro);
+   
   //id_formato
   $label = "Formato";
   $form->OpenRow();
@@ -48,7 +57,6 @@ SQL;
   $id_formato->SetTestIfEmpty(true, "Preencha o campo $label!");
   $id_formato->SetOptions($op_id_formato);
   $form->AddObject($id_formato);
-
 
   $form->OpenRow();
   $form->OpenHeader("", ["colspan" => 2]);
