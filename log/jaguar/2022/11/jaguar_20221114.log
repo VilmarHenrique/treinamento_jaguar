@@ -1,0 +1,1 @@
+Treinamento^2022-11-14 11:42:38^INSERT INTO pessoa (nm_pessoa, dt_nascimento, cd_pessoa) VALUES ('LULA', '1985-01-01', '12') ^0^man_pessoa.php^treinamento_jaguar 
