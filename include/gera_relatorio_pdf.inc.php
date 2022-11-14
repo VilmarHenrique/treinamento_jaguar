@@ -155,6 +155,7 @@ class gera_relatorio_pdf extends fpdfReport
   */
   function obtem_dados_filial()
   {
+    /*
     $sql = "SELECT p.nm_pessoa AS nm_filial, c.nm_cidade || ' / ' || uf.ds_sigla AS nm_cidade_filial, 
                    obtem_endereco(obtem_endereco_comercial(p.cd_pessoa)) AS ds_endereco_filial, cep.nr_cep ";
 
@@ -174,13 +175,14 @@ class gera_relatorio_pdf extends fpdfReport
 
     if (!$rs = $this->mConn->Select($sql))
       conn_mostra_erro();
-    else
-    {
-      $this->c_nm_cidade_cabecalho       = $rs->GetField("nm_cidade_filial");
-      $this->c_nm_filial_cabecalho       = $rs->GetField("nm_filial");
-      $this->c_endereco_filial_cabecalho = $rs->GetField("ds_endereco_filial");
-      $this->c_cep_filial_cabecalho      = Format_Cep($rs->GetField("nr_cep"), "sys", "pr_BR");
-    }
+      */
+  
+    
+      $this->c_nm_cidade_cabecalho       = "PASSO FUNDO / RS";
+      $this->c_nm_filial_cabecalho       = "Veplex sistemas";
+      $this->c_endereco_filial_cabecalho = "";
+      $this->c_cep_filial_cabecalho      = "99060-080";
+    
   }
 
 
@@ -205,7 +207,7 @@ class gera_relatorio_pdf extends fpdfReport
 
 
   function obtem_cd_empresa()
-  {
+  {/*
     if (!strlen($_SESSION["s_cd_empresa"]))
     {
       $sql = "SELECT cd_pessoa 
@@ -216,13 +218,15 @@ class gera_relatorio_pdf extends fpdfReport
         $this->c_cd_empresa = $rs->GetField(0);
     }
     else
-      $this->c_cd_empresa = $_SESSION["s_cd_empresa"];
+    */
+      $this->c_cd_empresa = 2;
   }
 
 
 
   function obtem_id_usuario_cabecalho()
   {
+    /*
     if (!$this->c_cd_empresa)
       $this->obtem_cd_empresa();
 
@@ -238,7 +242,8 @@ class gera_relatorio_pdf extends fpdfReport
         $this->c_id_usuario_cabecalho = $rs->GetField(0);
     }
     else
-      $this->c_id_usuario_cabecalho = $_SESSION["s_id_usuario_cabecalho"];
+    */
+      $this->c_id_usuario_cabecalho = 1;
   }
 
 

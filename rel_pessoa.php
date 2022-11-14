@@ -1,7 +1,7 @@
 <?php
   session_start();
   require_once("lib/jaguar/jaguar.inc.php");
-  //require_once("lib/fpdf/pdf.php");
+  require_once("lib/fpdf/pdf.php");
   require_once("include/funcoes.inc.php");
   
   $titulo = "Relatório de Pessoa";
@@ -42,23 +42,19 @@
   {
     case "1": //PDF
       require_once("include/gera_relatorio_pdf.inc.php");
-      
-      //sub_titulo
-      $sub_titulo2 = "";
-      $sub_titulo2 .= formata_sub_titulo_texto(obtem_dado_tabela($f_cd_cargo,         "cargo",                      "nm_cargo",  "cd_cargo"),  "Cargo",  40);
-      $sub_titulo2 .= formata_sub_titulo_texto(obtem_dado_tabela($f_cd_pessoa_filial, "vw_empresa_contabil_filial", "nm_pessoa", "cd_pessoa"), "Filial", 40);
-      $sub_titulo2 .= formata_sub_titulo_op("formata_id_mes", $f_dt_mes, "Mês");
-      $sub_titulo2 .= formata_sub_titulo_data($f_dt_nascimento_inicial, $f_dt_nascimento_final, "Dt. Aniversário");
-      
+
       //Relatório
-      $relatorio = new gera_relatorio_pdf($conn, "v", $titulo, false, $sub_titulo2);
-      
+      $relatorio = new gera_relatorio_pdf($conn, "v", $titulo);
+    
       //Campos
       unset($arr_campo);
-      $arr_campo[] = array("width" => 60, "fieldName" => "cd_funcionario|nm_funcionario", "label" => "Funcionário", "align" => "L");
-      $arr_campo[] = array("width" => 50, "fieldName" => "nm_pessoa_filial",              "label" => "Filial",      "align" => "L");
-      $arr_campo[] = array("width" => 20, "fieldName" => "dt_nascimento",                 "label" => "Nascimento",  "align" => "C");
-      $arr_campo[] = array("width" => 70, "fieldName" => "nm_cargo",                      "label" => "Cargo",       "align" => "L");
+      $arr_campo[] = array("width" => 15, "fieldName" => "cd_pessoa",     "label" => "Código",     "align" => "R");
+      $arr_campo[] = array("width" => 40, "fieldName" => "nm_pessoa",     "label" => "Nome",       "align" => "L");
+      $arr_campo[] = array("width" => 40, "fieldName" => "nm_logradouro", "label" => "Logradouro", "align" => "L");
+      $arr_campo[] = array("width" => 30, "fieldName" => "nm_bairro",     "label" => "Bairro",     "align" => "L");
+      $arr_campo[] = array("width" => 40, "fieldName" => "nm_cidade",     "label" => "Cidade",     "align" => "L");
+      $arr_campo[] = array("width" => 20, "fieldName" => "ds_email",      "label" => "E-mail",     "align" => "L");
+      $arr_campo[] = array("width" => 15, "fieldName" => "nr_telefone",   "label" => "Telefone",   "align" => "L");
       
       $relatorio->monta_campos($arr_campo);
       
