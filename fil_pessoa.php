@@ -12,6 +12,9 @@
 
   //Form
   $form = new JForm();
+  $form->AddFunction("abre_relatorio_");
+  $form->SetTarget("relatorio");
+  $form->SetAction(REL_SUBMIT);
 
   //cd_cidade
   $label = "Cidade";
