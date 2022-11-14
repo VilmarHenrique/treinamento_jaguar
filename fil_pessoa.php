@@ -32,12 +32,11 @@
 SQL;
  
   if ($rs = $conn->Select($sql))
-  $cd_cidade->SetOptions($rs->GetArray(true));
+  $cd_cidade->SetOptions($rs->GetArray(true ));
   else
   conn_mostra_erro();
 
   $form->AddObject($cd_cidade);
-
 
   //id_formato
   $label = "Formato";
