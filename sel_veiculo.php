@@ -24,9 +24,9 @@
   
   $visible_fields = [
     "cd_veiculo"        => "Código",
-    "ds_tipo_veiculo"   => "Descrição",
+    "ds_veiculo"        => "Descrição",
     "ds_placa"          => "Placa",
-    "ds_veiuculo"       => "Tipo",
+    "ds_tipo_veiculo"   => "Tipo",
     "nr_ano_fabricacao" => "Fab.",
     "nr_ano_modelo"     => "Modelo",
     "id_ativo"          => "Ativo",    
@@ -53,9 +53,10 @@
   $grid_veiculo->AddFilterField("ds_veiculo",      "Descrição", "text",   "~*", "ds_veiculo",false,false);
   $grid_veiculo->AddFilterField("cd_tipo_veiculo", "Tipo",      "number", "=",  "cd_tipo_veiculo",false,false);
   $grid_veiculo->AddFilterField("id_ativo",        "Ativo",     "select", "=",  "id_ativo", $op_id_sim_nao);
-
+  
   //CallBack
   $grid_veiculo->SetCallback(get_index_of($visible_fields, "id_ativo"), "formata_id_sim_nao");
+  $grid_veiculo->SetCallback(get_index_of($visible_fields, "ds_placa"), "Format_Placa", ["sys", "pt_BR"]);
     
   $html->AddObject($grid_veiculo);
   

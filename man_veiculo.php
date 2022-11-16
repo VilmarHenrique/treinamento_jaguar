@@ -2,21 +2,24 @@
   session_start();
   require_once("lib/jaguar/jaguar.inc.php");
   require_once("include/funcoes.inc.php");
-   
+  include("md_veiculo.php");
+  
   //Html
   $man = new JMaintenance($conn, "Manutenção de Veículo");
   $man->SetDBTable("veiculo");
   $man->AddMasterDetail($master);
+
+  //SetLocation
+  $key = array("f_cd_veiculo" => $f_cd_veiculo);
+  $man->SetLocation("insert", "man_veiculo_motorista.php", $key);
+  $man->SetLocation("update", "man_veiculo_motorista.php", $key);
+  $man->SetLocation("delete", "sel_veiculo.php");
   
   $conn->SetDebug(0);
 
   //cd_veiculo
   $cd_veiculo = new JFormHidden("f_cd_veiculo");
   $man->AddDBField("cd_veiculo", $cd_veiculo, false, true);
-
-  //cd_tipo_veiculo
-  $cd_tipo_veiculo = new JFormHidden("f_cd_tipo_veiculo");
-  $man->AddDBField("cd_tipo_veiculo", $cd_tipo_veiculo, false);
 
   //ds_veiculo
   $label = "Descrição";
@@ -46,19 +49,19 @@
   
   //ds_placa
   $label = "Placa";
-  $ds_placa = new JFormText("f_ds_placa");
+  $ds_placa = new JFormPlaca("f_ds_placa");
   $ds_placa->SetTestIfEmpty(true, "Preencha o campo {$label}!");
   $man->AddDBField("ds_placa", $ds_placa, "<b>{$label}</b>");
 
   //nr_ano_fabricacao
   $label = "Fabricação";
-  $nr_ano_fabricacao = new JFormText("f_nr_ano_fabricacao");
+  $nr_ano_fabricacao = new JFormNumber("f_nr_ano_fabricacao");
   $nr_ano_fabricacao->SetTestIfEmpty(true, "Preencha o campo {$label}!");
   $man->AddDBField("nr_ano_fabricacao", $nr_ano_fabricacao, "<b>{$label}</b>");
 
   //nr_ano_modelo
   $label = "Modelo";
-  $nr_ano_modelo = new JFormText("f_nr_ano_modelo");
+  $nr_ano_modelo = new JFormNumber("f_nr_ano_modelo");
   $nr_ano_modelo->SetTestIfEmpty(true, "Preencha o campo {$label}!");
   $man->AddDBField("nr_ano_modelo", $nr_ano_modelo, "<b>{$label}</b>");
 
