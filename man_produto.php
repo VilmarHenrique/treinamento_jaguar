@@ -29,8 +29,6 @@
   $id_ativo->SetOptions($op_id_sim_nao);
   $id_ativo->SetFirstEmpty();
   $man->AddDBField("id_ativo", $id_ativo, "<b>{$label}</b>");
-
-
   
   //man End
   $man->BuildEndMaintenance();

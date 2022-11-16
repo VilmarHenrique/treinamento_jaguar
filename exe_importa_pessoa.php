@@ -17,16 +17,27 @@
   $form->OpenRow();
   $form->OpenHeader("Arquivo");
   $form->OpenCell();
-  $nm_regiao = new JFormFile("f_nm_regiao");
-  $nm_regiao->SetTestIfEmpty(true, "Preencha o campo {$label}!");
-  $form->AddObject($nm_regiao);
+  $ds_arquivo = new JFormFile("f_ds_arquivo");
+  $ds_arquivo->SetTestIfEmpty(true, "Preencha o campo {$label}!");
+  $form->AddObject($ds_arquivo);
 
+  $form->OpenRow();
+  $form->OpenHeader("", ["colspan" => 2]);
+  $submit = new JFormSubmit("f_submit", "Enviar");
+  $form->AddObject($submit);
 
   if ($form->IsSubmitted())
-  {
-    //Ler o arquivo e mostrar os registros na tela
+{
+ 
+   $arr = file($_FILES["f_ds_arquivo"]["tmp_name"]);
+    foreach ($arr as &$value){
+      explode(";", $value);
+    };
     
-  }
+    
+
+  
+}
 
   $html->AddObject($form);
 

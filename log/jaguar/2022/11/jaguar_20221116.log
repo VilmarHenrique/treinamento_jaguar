@@ -1,0 +1,33 @@
+Treinamento^2022-11-16 09:43:02^INSERT INTO tipo_veiculo (ds_tipo_descricao, cd_tipo_veiculo) VALUES ('BMW', '1') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:43:18^INSERT INTO tipo_veiculo (ds_tipo_descricao, cd_tipo_veiculo) VALUES ('BMW', '2') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:46:32^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('BMW', '3') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:48:55^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('MERCEDES', '4') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:49:12^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('VOLKSWAGEN', '5') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:49:19^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('FORD', '6') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:50:23^DELETE FROM tipo_veiculo WHERE cd_tipo_veiculo = '3' ^2^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:50:28^DELETE FROM tipo_veiculo WHERE cd_tipo_veiculo = '4' ^2^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:50:33^DELETE FROM tipo_veiculo WHERE cd_tipo_veiculo = '5' ^2^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:50:38^DELETE FROM tipo_veiculo WHERE cd_tipo_veiculo = '6' ^2^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:50:53^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('CAMINHAO', '7') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:51:06^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('VEICULO DE PASSEIO', '8') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:52:11^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('BICICLETA', '9') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:52:15^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('CICLOMOTOR', '10') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:52:20^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('MOTONETA', '11') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:52:24^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('MOTOCICLETA', '12') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:52:29^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('TRICICLO', '13') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:52:33^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('QUADRICICLO', '14') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:52:37^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('AUTOMOVEL', '15') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 09:52:41^INSERT INTO tipo_veiculo (ds_tipo_veiculo, cd_tipo_veiculo) VALUES ('MICROONIBUS', '16') ^0^man_tipo_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 10:24:53^INSERT INTO veiculo (cd_tipo_veiculo, nm_pais, cd_veiculo) VALUES (NULL, 'BMW', '1') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 10:38:08^INSERT INTO veiculo (cd_tipo_veiculo, ds_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, cd_veiculo) VALUES (NULL, 'BMW', '15', 'FQP6654', '2020', '2022', '2') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 10:38:39^INSERT INTO veiculo (cd_tipo_veiculo, ds_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, cd_veiculo) VALUES (NULL, 'BMW', '15', 'FQP6654', '2020', '2022', '3') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 10:44:15^INSERT INTO veiculo (cd_tipo_veiculo, ds_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, cd_veiculo) VALUES (NULL, 'BMW', '15', 'FQP6654', '2020', '2022', '4') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 10:45:36^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, cd_veiculo) VALUES (NULL, '15', 'FQP6654', '2020', '2022', '5') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 10:58:20^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, cd_veiculo) VALUES ('9', '564', '654156', '6512', '6546', '6') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 11:06:34^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, id_ativo, cd_veiculo) VALUES ('15', 'BMW', 'FQP6654', '2020', '2022', 'SIM', '7') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 11:06:46^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, id_ativo, cd_veiculo) VALUES ('15', 'BMW', 'FQP6654', '2020', '2022', 'SIM', '8') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 11:08:44^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, id_ativo, cd_veiculo) VALUES ('15', 'BMW', 'FQP6654', '2020', '2022', 'sim', '9') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 11:09:17^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, id_ativo, cd_veiculo) VALUES ('15', 'BMW', 'FQP6654', '2020', '2022', 'sim', '10') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 11:09:35^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, id_ativo, cd_veiculo) VALUES ('15', 'BMW', 'FQP6654', '2020', '2022', 'sim', '11') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 11:12:06^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, id_ativo, cd_veiculo) VALUES ('15', 'BMW', 'FQP6654', '2020', '2022', '1', '12') ^0^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 11:12:26^INSERT INTO veiculo (cd_tipo_veiculo, ds_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, id_ativo, cd_veiculo) VALUES ('15', 'MERCEDES', 'FQP6654', '2020', '2022', '1', '13') ^0^man_veiculo.php^treinamento_jaguar 
