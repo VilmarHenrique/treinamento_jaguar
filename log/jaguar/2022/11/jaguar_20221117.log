@@ -1,0 +1,4 @@
+Treinamento^2022-11-17 10:30:48^INSERT INTO email (cd_pessoa, ds_email, id_principal, cd_email) VALUES ('2', 'juarez@hotmail.com', '0', '14') ^0^man_email.php^treinamento_jaguar 
+Treinamento^2022-11-17 13:49:44^INSERT INTO veiculo_motorista (cd_pessoa, cd_veiculo, dt_vigencia) VALUES ('7', '16', '2018-01-01') ^0^man_veiculo_motorista.php^treinamento_jaguar 
+Treinamento^2022-11-17 14:08:41^INSERT INTO veiculo_motorista (cd_pessoa, cd_veiculo, dt_vigencia) VALUES ('12', '16', '2022-11-18') ^0^man_veiculo_motorista.php^treinamento_jaguar 
+Treinamento^2022-11-17 14:11:28^INSERT INTO veiculo_motorista (cd_pessoa, cd_veiculo, dt_vigencia) VALUES ('12', '14', '2020-01-01') ^0^man_veiculo_motorista.php^treinamento_jaguar 
