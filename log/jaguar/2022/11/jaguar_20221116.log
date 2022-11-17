@@ -39,3 +39,10 @@ Treinamento^2022-11-16 14:53:14^UPDATE veiculo SET ds_veiculo = 'DODGE', cd_tipo
 Treinamento^2022-11-16 14:53:22^DELETE FROM veiculo WHERE cd_veiculo = '12' ^2^man_veiculo.php^treinamento_jaguar 
 Treinamento^2022-11-16 14:53:50^INSERT INTO veiculo (ds_veiculo, cd_tipo_veiculo, ds_placa, nr_ano_fabricacao, nr_ano_modelo, id_ativo, cd_veiculo) VALUES ('GOL BRANCO', '15', 'JDU0543', '1992', '1993', '1', '16') ^0^man_veiculo.php^treinamento_jaguar 
 Treinamento^2022-11-16 14:54:00^INSERT INTO veiculo_motorista (cd_pessoa, cd_veiculo, dt_vigencia) VALUES ('11', '16', '2010-01-04') ^0^man_veiculo_motorista.php^treinamento_jaguar 
+Treinamento^2022-11-16 15:20:53^UPDATE veiculo SET ds_veiculo = 'MERCEDES', cd_tipo_veiculo = '15', ds_placa = 'FQP6654', nr_ano_fabricacao = '2020', nr_ano_modelo = '2022', id_ativo = '1' WHERE cd_veiculo = '13' ^1^man_veiculo.php^treinamento_jaguar 
+Treinamento^2022-11-16 15:21:21^INSERT INTO veiculo_motorista (cd_pessoa, cd_veiculo, dt_vigencia) VALUES ('2', '13', '2022-11-20') ^0^man_veiculo_motorista.php^treinamento_jaguar 
+Treinamento^2022-11-16 15:28:30^DELETE FROM veiculo_motorista WHERE cd_veiculo = '13' AND dt_vigencia = '2022-11-20' ^2^man_veiculo_motorista.php^treinamento_jaguar 
+Treinamento^2022-11-16 15:29:19^INSERT INTO veiculo_motorista (cd_pessoa, cd_veiculo, dt_vigencia) VALUES ('7', '13', '2022-11-16') ^0^man_veiculo_motorista.php^treinamento_jaguar 
+Treinamento^2022-11-16 15:29:29^DELETE FROM veiculo_motorista WHERE cd_veiculo = '13' AND dt_vigencia = '2022-11-16' ^2^man_veiculo_motorista.php^treinamento_jaguar 
+Treinamento^2022-11-16 15:38:58^INSERT INTO veiculo_motorista (cd_pessoa, cd_veiculo, dt_vigencia) VALUES ('7', '14', '2022-11-26') ^0^man_veiculo_motorista.php^treinamento_jaguar 
+Treinamento^2022-11-16 15:39:06^DELETE FROM veiculo_motorista WHERE cd_veiculo = '14' AND dt_vigencia = '2022-11-26' ^2^man_veiculo_motorista.php^treinamento_jaguar 

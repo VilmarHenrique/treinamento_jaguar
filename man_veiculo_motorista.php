@@ -16,7 +16,7 @@
   
   //SetLocation
   $key = array("f_cd_veiculo" => $f_cd_veiculo);
-  $man->SetLocation("insert", "man_veiculo_motorista.php", $key);
+  $man->SetLocation("insert", "man_veiculo_motorista.php", $key); 
   $man->SetLocation("delete", "man_veiculo_motorista.php", $key);
   $man->SetLocation("update", "man_veiculo_motorista.php", $key);
   
@@ -24,10 +24,8 @@
   if (strlen($f_cd_veiculo))
   {
     $sql =
-      "SELECT vm.cd_veiculo, vm.cd_pessoa, v.ds_veiculo, v.ds_placa
-         FROM veiculo_motorista vm
-         JOIN veiculo v ON v.cd_veiculo = vm.cd_veiculo
-         JOIN pessoa p ON p.cd_pessoa = vm.cd_pessoa
+      "SELECT v.cd_veiculo, v.ds_veiculo, v.ds_placa
+         FROM veiculo v
          WHERE v.cd_veiculo = {$f_cd_veiculo}";
     
     if ($rs = $conn->Select($sql))
@@ -35,7 +33,10 @@
       $man->mForm->OpenRow();
       $man->mForm->OpenHeader("<b>Veículo</b>");
       $man->mForm->OpenCell("<b>{$rs->GetField("cd_veiculo")} / {$rs->GetField("ds_veiculo")}</b>");
-      $man->mForm->OpenCell("<b>{$rs->GetField("ds_placa")}</b>");
+      $man->mForm->OpenRow();
+      $man->mForm->OpenHeader("<b>Placa</b>");
+      $man->mForm->OpenCell("<b>{$rs->GetField("ds_placa")}</b>");  
+         
     }
     else
       conn_mostra_erro();
@@ -90,8 +91,8 @@
   $grid_veiculo_motorista = new JDBGrid("veiculo_{$f_cd_veiculo}", $conn, $sql);
 
   $visible_fields = [
-    "dt_vigencia"   => "Dt. Vigência",
-    "nm_pessoa"      => "Pessoa",
+    "dt_vigencia" => "Dt. Vigência",
+    "nm_pessoa"   => "Pessoa",
   ];
     
   $nr_fields = sizeof($visible_fields);
