@@ -31,12 +31,13 @@
  
    $arr = file($_FILES["f_ds_arquivo"]["tmp_name"]);
     foreach ($arr as &$value){
-      explode(";", $value);
-    };
-    
-    
+      $explode = explode(";", $value);
+      $nome  = $explode [0];
+      $email = $explode[1]; 
+      $telefone = $explode[2];
+          
+};
 
-  
 }
 
   $html->AddObject($form);
