@@ -13,7 +13,7 @@
   //Form
   $form = new JForm();
 
-  $label = "Nome";
+  $label = "Arquivo";
   $form->OpenRow();
   $form->OpenHeader("Arquivo");
   $form->OpenCell();
@@ -27,19 +27,66 @@
   $form->AddObject($submit);
 
   if ($form->IsSubmitted())
-{
- 
-   $arr = file($_FILES["f_ds_arquivo"]["tmp_name"]);
-    foreach ($arr as &$value){
-      $explode = explode(";", $value);
-      $nome  = $explode [0];
-      $email = $explode[1]; 
-      $telefone = $explode[2];
+  {
+    $arr_arquivo = file($_FILES["f_ds_arquivo"]["tmp_name"]);
+
+    foreach ($arr_arquivo as $ds_linha)
+    {
+      $arr_linha     = explode(",", $ds_linha);
+      $nm_pessoa     = $arr_linha[0];
+      $dt_nascimento = Format_Date($arr_linha[1], "pt_BR", "sys");
+      $ds_email      = $arr_linha[2];
+      $nr_telefone   = trim($arr_linha[3]);
+      $tam_telefone  = strlen($nr_telefone);
+        if ($tam_telefone > 10 )
+      {
+       $id_tipo = 3;
+      }
+      else {
+       $id_tipo = 2;
+      };    
+
+
+      $cd_pessoa = busca_nextval("pessoa_cd_pessoa_seq");
           
-};
+      //Insert "pessoa"
+      $values = [
+        "cd_pessoa"     => $cd_pessoa,
+        "nm_pessoa"     => $nm_pessoa,
+        "dt_nascimento" => $dt_nascimento,                
+      ];
 
-}
+      if ($conn->Insert("pessoa", $values))
+      {
+        //Insert "telefone;
+        $values = [
+          "cd_pessoa"    => $cd_pessoa,
+          "nr_telefone"  => $nr_telefone,
+          "id_tipo"      => $id_tipo,
+          "id_principal" => 1,
+        ];
 
+        if ($conn->Insert("telefone", $values))
+        {
+          //Insert "email";
+          $values = [
+            "cd_pessoa"    => $cd_pessoa,
+            "ds_email"     => $ds_email,
+            "id_principal" => 1,
+          ];
+
+          if (!$conn->Insert("email",$values))
+            conn_mostra_erro();
+        }
+        else
+          conn_mostra_erro();
+      }
+      else
+          conn_mostra_erro();
+    }
+   
+  }   
+   
   $html->AddObject($form);
 
   echo $html->GetHtml();

@@ -1,0 +1,431 @@
+Treinamento^2022-11-21 13:10:50^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:10:53^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:11:12^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:16:29^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:17:03^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:19:55^INSERT INTO pessoa (0, 1, 2) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:43^INSERT INTO pessoa (0, 1, 2) VALUES ('Joao da Silva', 'joao.dasilva@gmail.com', '5433141414') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:43^INSERT INTO pessoa (0, 1, 2) VALUES ('Fulano de Tal', 'fulano@gmail.com', '5433131313') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:43^INSERT INTO pessoa (0, 1, 2) VALUES ('Ciclano de Tal', 'ciclano@gmail.com', '5433121212') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:44^INSERT INTO pessoa (0, 1, 2) VALUES ('Alberto Roberto', 'albertoroberto@gmail.com', '54999995959') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:44^INSERT INTO pessoa (0, 1, 2) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:54^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Joao da Silva', 'joao.dasilva@gmail.com', '5433141414') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:54^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Fulano de Tal', 'fulano@gmail.com', '5433131313') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:54^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Ciclano de Tal', 'ciclano@gmail.com', '5433121212') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:54^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Alberto Roberto', 'albertoroberto@gmail.com', '54999995959') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:20:54^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:21:14^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:21:20^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:23:23^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:23:39^INSERT INTO pessoa (Nome, E-mail, Telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:24:31^INSERT INTO pessoa (nm_pessoa, ds_email, nr_telefone) VALUES ('Frederico Tesouro', 'fredtesouro@gmail.com', '54996969696') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:52:23^INSERT INTO pessoa () VALUES (NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:52:31^INSERT INTO pessoa () VALUES (NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:52:48^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('19', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:52:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('20', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:52:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('21', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:52:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('22', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:52:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('23', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:52:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('23', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:44^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('24', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:44^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('25', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:44^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('26', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:44^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('27', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:44^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('28', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:44^INSERT INTO telefone (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('28', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:44^INSERT INTO email (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('28', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:44^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('28', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('29', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('30', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('31', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('32', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('33', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:49^INSERT INTO telefone (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('33', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:49^INSERT INTO email (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('33', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 13:58:49^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('33', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:04:26^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('34', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:04:26^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('35', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:04:26^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('36', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:04:26^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('37', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:04:26^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('38', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:04:26^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('38', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:08:35^INSERT INTO pessoa () VALUES (NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:08:53^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('39', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:08:53^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('40', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:08:53^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('41', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:08:53^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('42', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:08:53^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('43', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:08:53^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('43', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:10:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('44', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:10:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('45', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:10:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('46', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:10:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('47', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:10:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('48', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:10:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('48', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:12:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('49', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:12:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('50', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:12:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('51', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:12:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('52', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:12:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('53', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:12:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('53', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:13:36^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('54', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:13:36^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('55', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:13:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('56', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:13:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('57', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:13:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('58', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:13:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('58', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:25^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('59', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:25^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('60', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:25^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('61', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:25^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('62', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:25^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('63', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:32^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('64', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:32^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('65', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:32^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('66', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:32^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('67', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:18:32^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('68', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:13^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, ds_email, nr_telefone) VALUES ('69', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL, NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:13^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, ds_email, nr_telefone) VALUES ('70', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL, NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:13^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, ds_email, nr_telefone) VALUES ('71', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL, NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:13^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, ds_email, nr_telefone) VALUES ('72', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL, NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:13^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, ds_email, nr_telefone) VALUES ('73', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL, NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, nr_telefone) VALUES ('74', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, nr_telefone) VALUES ('75', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, nr_telefone) VALUES ('76', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, nr_telefone) VALUES ('77', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento, nr_telefone) VALUES ('78', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('79', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('80', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('81', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('82', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:21:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('83', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:29:04^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('84', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:29:04^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('85', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:29:05^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('86', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:29:05^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('87', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:29:05^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('88', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('89', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('90', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('91', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('92', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('93', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('94', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('95', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('96', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('97', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:30:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('98', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:04^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('99', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:04^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('100', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:04^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('101', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:04^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('102', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:04^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('103', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('104', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('105', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('106', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('107', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:31:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('108', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:32:34^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('109', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:32:34^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('110', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:32:34^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('111', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:32:34^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('112', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:32:34^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('113', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:35:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('114', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:35:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('115', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:35:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('116', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:35:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('117', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:35:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('118', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('119', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('120', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('121', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('122', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('123', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('124', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('125', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('126', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('127', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('128', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:35^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('129', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:35^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('130', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:35^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('131', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:35^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('132', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:35^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('133', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:55^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('134', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:55^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('135', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:55^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('136', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:55^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('137', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:43:55^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('138', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:44:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('139', 'Joao da Silva,12/04/2001,joao.dasilva@gmail.com,5433141414', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:44:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('140', 'Fulano de Tal,15/03/1990,fulano@gmail.com,5433131313', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:44:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('141', 'Ciclano de Tal,07/08/1987,ciclano@gmail.com,5433121212', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:44:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('142', 'Alberto Roberto,05/05/1996,albertoroberto@gmail.com,54999995959', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:44:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('143', 'Frederico Tesouro,01/08/1965,fredtesouro@gmail.com,54996969696', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('144', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '144', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('145', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '145', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('146', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '146', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('147', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '147', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('148', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:07^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '148', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:36^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('149', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:36^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '149', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('150', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:37^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '150', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('151', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:37^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '151', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('152', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:37^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '152', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('153', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:37^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '153', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('154', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '154', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('155', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '155', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('156', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '156', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('157', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '157', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('158', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:45:42^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '158', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:00^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('159', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:00^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '159', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:00^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('160', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:00^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '160', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:00^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('161', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:00^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '161', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:00^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('162', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:00^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '162', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:01^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('163', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:01^INSERT INTO tel  print_r(Array);efone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '163', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('164', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '164', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('165', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '165', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('166', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '166', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('167', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '167', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('168', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:46:47^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '168', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('169', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '169', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('170', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '170', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('171', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '171', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('172', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '172', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:21^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('173', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:47:22^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '173', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('174', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '174', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('175', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '175', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('176', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '176', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('177', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '177', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('178', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:52:46^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '178', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('179', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '179', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('180', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '180', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('181', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '181', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('182', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '182', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('183', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:33^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '183', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:41^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('184', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:41^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '184', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('185', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:42^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '185', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('186', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:42^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '186', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('187', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:42^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '187', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:42^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('188', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:42^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '188', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:51^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('189', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:51^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '189', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:51^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('190', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:51^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '190', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:52^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('191', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:52^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '191', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:52^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('192', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:52^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '192', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:52^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('193', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:53:52^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '193', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:02^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('194', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:02^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '194', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:02^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('195', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:03^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '195', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:03^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('196', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:03^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '196', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:03^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('197', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:03^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '197', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:03^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('198', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:03^INSERT INTO telefone (cd_telefone, cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES (NULL, '198', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:38^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('199', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:38^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('199', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:39^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('200', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:39^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('200', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:39^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('201', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:39^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('201', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:39^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('202', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:39^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('202', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:39^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('203', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 14:55:39^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('203', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:45^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('204', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:45^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('204', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('205', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:46^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('205', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('206', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:46^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('206', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('207', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:46^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('207', '12', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:46^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('208', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:00:46^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('208', '12', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:19^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('209', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:19^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('209', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('210', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('210', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('211', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('211', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('212', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('212', '12', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('213', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('213', '12', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('214', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('214', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('215', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('215', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('216', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('216', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('217', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('217', '12', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('218', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:01:36^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('218', '12', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('219', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:30^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('219', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:30^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('220', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:30^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('220', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('221', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:31^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('221', '11', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('222', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:31^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('222', '12', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:31^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('223', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:04:31^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('223', '12', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:40^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('224', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:40^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('224', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:40^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('225', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:40^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('225', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:40^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('226', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:40^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('226', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:40^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('227', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:40^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('227', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:41^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('228', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:17:41^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('228', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('229', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('229', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('230', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('230', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('231', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('231', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('232', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('232', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('233', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:18:08^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('233', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:10^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('234', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:10^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('234', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:10^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('235', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:10^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('235', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:11^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('236', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:11^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('236', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:11^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('237', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:11^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('237', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:11^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('238', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:11^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('238', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:37^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('239', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:37^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('239', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:38^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('240', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:38^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('240', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:38^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('241', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:38^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('241', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:38^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('242', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:38^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('242', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:38^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('243', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:19:38^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('243', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('244', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('244', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('245', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('245', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('246', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('246', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('247', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('247', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('248', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:20^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('248', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('249', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('249', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('250', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('250', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('251', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('251', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('252', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('252', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('253', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:20:58^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('253', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('254', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('254', '5433141414', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('255', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('255', '5433131313', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('256', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('256', '5433121212', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('257', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('257', '54999995959', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('258', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:22:23^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('258', '54996969696', NULL, NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:18^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('259', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:18^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('259', '5433141414', '2', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:18^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('260', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:18^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('260', '5433131313', '2', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:18^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('261', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:18^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('261', '5433121212', '2', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:18^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('262', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:19^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('262', '54999995959', '3', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:19^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('263', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:25:19^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('263', '54996969696', '3', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:26^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('264', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:26^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('264', '5433141414', '2', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('264', 'joao.dasilva@gmail.com', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('265', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('265', '5433131313', '2', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('265', 'fulano@gmail.com', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('266', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('266', '5433121212', '2', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('266', 'ciclano@gmail.com', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('267', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('267', '54999995959', '3', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('267', 'albertoroberto@gmail.com', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('268', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('268', '54996969696', '3', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:28:27^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('268', 'fredtesouro@gmail.com', NULL) ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('269', 'Joao da Silva', '2001-04-12') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('269', '5433141414', '2', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('269', 'joao.dasilva@gmail.com', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('270', 'Fulano de Tal', '1990-03-15') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('270', '5433131313', '2', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('270', 'fulano@gmail.com', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('271', 'Ciclano de Tal', '1987-08-07') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('271', '5433121212', '2', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('271', 'ciclano@gmail.com', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('272', 'Alberto Roberto', '1996-05-05') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('272', '54999995959', '3', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('272', 'albertoroberto@gmail.com', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO pessoa (cd_pessoa, nm_pessoa, dt_nascimento) VALUES ('273', 'Frederico Tesouro', '1965-08-01') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO telefone (cd_pessoa, nr_telefone, id_tipo, id_principal) VALUES ('273', '54996969696', '3', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
+Treinamento^2022-11-21 15:29:07^INSERT INTO email (cd_pessoa, ds_email, id_principal) VALUES ('273', 'fredtesouro@gmail.com', '1') ^0^exe_importa_pessoa.php^treinamento_jaguar 
