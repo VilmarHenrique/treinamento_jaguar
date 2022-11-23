@@ -1,32 +1,39 @@
 <?php
     $arr_numeros = [];
-    
+    $countpositivo = 0;
+    $countnegativo = 0;
+    $countpar      = 0;
+    $countimpar    = 0;
+
+
+         
   //Leio os registros e armazeno no array "arr_numeros"
-  for ($i = 1; $i <= 2; $i++)
+  for ($i = 1; $i <= 10; $i++)
   {
-    $arr_numeros = readline("Informe 10 numeros:");
-
-
-  }
-
-
-
-
-/*     if($arr_numeros % 2 == 0)
-    { echo "Numero Par"; }
-     else {
-       echo "Numero Impar"; 
-      }
-       
-    if($arr_numeros < 0){
-      echo "Negativo";}
+     $arr_numeros[$i] = readline("Informe 10 numeros:");
+    if($arr_numeros[$i]>= 0){
+      $countpositivo++;
+    }
     else{
-      echo "Positivo";
+      $countnegativo++;
+    }
+    if($arr_numeros[$i]% 2 == 0){
+      $countimpar++;
+    }
+    else{
+      $countpar++;
     }
   }
+   echo "positvos: $countpositivo / negativos: $countnegativo / par: $countimpar / impar: $countpar";
+
+
+
+
   
 
- */
+
+
+
 /* 
   Entre com 10 números e armazene em um array.
   Ao final o programa deverá mostrar:
