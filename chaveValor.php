@@ -19,8 +19,8 @@
     $arr_notas[$chave] = $valor; 
   }
 } 
-$valor = array_sum($arr_notas);
+/* $valor = array_sum($arr_notas); */
    
-print_r($valor);
+print_r($arr_notas);
 
 
