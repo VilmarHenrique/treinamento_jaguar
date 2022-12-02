@@ -24,8 +24,8 @@
   $visible_fields = [
     "cd_pedido"   => "Código",
     "nm_pessoa"   => "Pessoa",
-    "dt_pedido"     => "Data",
-    "vl_pedido"    => "Valor ",
+    "dt_pedido"   => "Data",
+    "vl_pedido"   => "Valor ",
   ];
   
   $nr_fields = sizeof($visible_fields);
